@@ -1,0 +1,14 @@
+include ../abstracts/mixins/_office.pug
+include ../abstracts/bemto/bemto.pug
+
+- var spb = [{title : 'Санкт-Петербург', languages: [['ru.png', 'русский язык'], ['en.png', 'английский язык']], address: 'Станции метро: "Горьковская" / "Петроградская", ул. Кропоткина, д. 1, оф. 409, БЦ "Сенатор"', email: 'spb@mostest.ru', fax: '+7 (812) 332-93-48', tel: '+7 (812) 923-20-03', workFrom: '9:30', workTo: '18:00', mapSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6718.11091275109!2d30.309736941716864!3d59.960242078467395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963143ee847b9b%3A0x92d337fad445e3ef!2z0YPQuy4g0JrRgNC-0L_QvtGC0LrQuNC90LAsIDEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcxMDE!5e0!3m2!1sru!2sru!4v1473421466990'}] 
+- var kazan = [{title : 'Казань', languages: [['ru.png', 'русский язык'], ['en.png', 'английский язык']], address: 'ул. Николая Ершова, д. 29б', email: '16@mostest.ru', tel: '+7 (843) 258-55-24', workFrom: '9:30', workTo: '18:00', mapSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6721.3955255705405!2d49.167326744775515!3d55.79329624203145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead7854cfa909%3A0xb2f03aabe2619aa!2z0YPQuy4g0J3QuNC60L7Qu9Cw0Y8g0JXRgNGI0L7QstCwLCAyOdCRLCDQmtCw0LfQsNC90YwsINCg0LXRgdC_LiDQotCw0YLQsNGA0YHRgtCw0L0sIDQyMDA2MQ!5e0!3m2!1sru!2sru!4v1473421551420'}] 
+- var belgorod = [{title : 'Белгород', languages: [['ru.png', 'русский язык']], address: 'ул. Студенческая, д. 21А', email: '31@mostest.ru', tel: '+7 (919) 285-48-38', workFrom: '9:30', workTo: '18:00', mapSource: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6758.264176806884!2d36.559951933286634!3d50.61803628265849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41266adbd739beaf%3A0x966efaa82dfe0b32!2z0KHRgtGD0LTQtdC90YfQtdGB0LrQsNGPINGD0LsuLCAyMdCQLCDQkdC10LvQs9C-0YDQvtC0LCDQkdC10LvQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgMzA4MDIz!5e0!3m2!1sru!2sru!4v1473421635292'}]
+
+
+// Offices
++e.offices
+  +office(spb)
+  +office(kazan)
+  +office(belgorod)
+

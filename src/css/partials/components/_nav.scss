@@ -1,0 +1,115 @@
+.nav{
+  flex: 0 0 33%;
+
+  &__hamburger{
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    right: calc(50% - 160px);
+    transform: translateX(50%);
+    @include mq($from:xs, $until:lg){
+      display: block;
+    }
+    @include mq($from:xs, $until:sm){
+      top: 310px;
+      right: calc(50% - 140px);
+    }
+  }
+}
+
+.hamburger{
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  span{
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+    height: 3px;
+    background-color: $blue;
+
+    &:after, &:before{
+      content: "";
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: $blue;
+    }
+    &:before{
+      transform: translateY(-250%);
+    }    
+    &:after{
+      transform: translateY(150%);
+    }    
+  }
+}
+
+.menu{
+  &__list{
+    margin: 0 0 15px;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: flex-end;    
+  }
+  &__item{
+    margin-left: 15px;
+  }
+  &__link{
+    color: $white;
+    &:hover,  &:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.search{
+  text-align: right;
+  margin-bottom: 15px;
+  // @include mq($from:xs, $until:md){
+  //   flex: 0 0 100%;
+  //   text-align: center;
+  // }
+
+  &__input{
+    font-size: $font-size-small;
+    padding: 8px 10px;
+    border: none;
+    text-transform: uppercase;
+    &::-webkit-input-placeholder{
+      color: $text-color;         
+    }       
+    &::placeholder{
+      color: $text-color;         
+    }  
+    &:hover, &:focus{
+      outline: none;
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;         
+    }       
+    &:focus::placeholder{
+      color: transparent;         
+    }   
+  }
+  &__btn{
+    float: right;
+    width: 31px;
+    height: 31px;
+    position: relative;
+    background-color: $grey-border;
+    padding: 5px;
+    border: none;
+    &:after{
+      content: "";
+      @include sprite($s-icon-search);
+      position: absolute;    
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
+}

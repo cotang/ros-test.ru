@@ -1,0 +1,28 @@
+include ../abstracts/bemto/bemto.pug
+
++b.SECTION.offers(itemscope, itemtype="http://schema.org/Service") 
+  +e.H2.title 
+    span Наши предложения
+  +e.UL.list
+    +e.item(itemprop="offers")
+      +e.text 
+        span.wider Оформляем все виды документов
+      +e.icon
+      +b.A.btn(href="#") Подать заявку
+    +e.item(itemprop="offers")
+      +e.text 
+        span Расчет стоимости
+      +e.icon
+      +b.A.btn(href="#") Заказать расчет               
+    +e.item(itemprop="offers")
+      +e.text 
+        span Штрихкод на продукцию
+      +e.icon
+      +b.A.btn(href="#") Заказать штрихкод
+    +e.item(itemprop="offers")
+      +e.text 
+        span Сертификат ISO
+      +e.icon
+      +b.A.btn(href="#") Заказать ISO
+
+

@@ -1,0 +1,57 @@
+.glossary{
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__all{
+    display: inline-block;
+    margin-right: 10px;
+  }
+  &__link{
+    color: $text-color;
+    font-weight: $semibold;
+    &:hover, &:focus, &:active{
+      color: $white;
+      background-color: $blue;
+    }
+    // &--current{
+    //   background-color: $blue;
+    //   color: $white;
+    //   &:hover, &:focus, &:active{
+    //     color: $white;
+    //   }
+    // }
+  }
+  &__link-all{
+    display: inline-block;
+    margin-right: 10px;
+    color: $text-color;
+    font-weight: $semibold;
+    &:hover, &:focus, &:active{
+      color: $white;
+      background-color: $blue;
+    }
+    // &--current{
+    //   background-color: $blue;
+    //   color: $white;
+    //   &:hover, &:focus, &:active{
+    //     color: $white;
+    //   }
+    // }
+  }
+  &__letter{
+    color: $grey;
+  }
+}
+
+.glossary-item{
+  margin: 20px 0;
+  &__link{
+    color: $text-color;
+    font-weight: $semibold;
+    &:hover, &:focus, &:active{
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}

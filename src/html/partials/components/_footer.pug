@@ -1,0 +1,100 @@
+include ../abstracts/bemto/bemto.pug
+
+// Pre footer
++b.SECTION.pre-footer.container
+  +e.H2.title 
+    span Контактная информация
+  // Reviews section
+  +b.SECTION.reviews-section
+    +e.H3.title 
+      a(href="page-reviews.html") Отзывы наших клиентов
+    +e.UL.list
+      +e.item
+        +e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad... minim veniam, quis nostrud exercitation.
+        +e.link(href="single-reviews.html") Смотреть полностью
+        +e.date 06.07.15
+      +e.item 
+        +e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad... minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        +e.link(href="single-reviews.html") Смотреть полностью
+        +e.date 06.07.15
+  // Specialists
+  +b.SECTION.specialists
+    +e.H3.title Ваш специалист
+    +b.manager
+      +e.img-wrapper
+        +e.img
+          img(src="img/managers/spec.jpg" alt="Елена" title="Елена")
+        +b.A.btn(href="#") Спросить он-лайн
+      +e.info
+        +e.P.position Специалист по сертификации
+        +e.H3.name Елена Капралова
+        +e.A.link--icq(href= "http://www.icq.com/whitepages/cmd.php?uin=444223004&action=message", target="_blank") 444-223-004
+        +e.A.link--skype(href= "skype:skypecall", target="_blank") skype: skypecall
+        +e.A.link--mail(href="mailto:info@ros-test.ru", target="_blank") info@ros-test.ru
+  // Contacts section
+  +b.SECTION.contacts-section
+    +e.title-wrapper
+      +e.H3.title Рос-тест Санкт-Петербург
+      +e.A.link-all(href="page-contacts.html") Смотреть все филиалы
+    +e.info
+      +e.address м."Елизаровская"
+      +e.address ул.Бабушкина, д.3, оф.255
+      +e.A.link(href="tel:+78123350511", target="_blank") (812) 335-05-11
+      +e.A.link(href="tel:+78129238223", target="_blank") (812) 923-82-23
+    +e.map
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4240.110454070536!2d30.413835351820655!3d59.89785921195567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fcd58f5a521%3A0xb70d4a7dc713bde5!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAzLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkyMDI5!5e0!3m2!1sru!2sru!4v1473687650068")
+
+// Footer
++b.FOOTER.footer
+  +e.inner.container
+    // Logo
+    +b.logo
+      +e.A.img(href="index.html")       
+        img(src="img/logo.png", alt="logo", title="logo")
+    // Second menu
+    +b.menu--second 
+      +e.UL.list
+        +e.item
+          +e.link(href="index.html") Главная
+        +e.item 
+          +e.link(href="page-news.html") Новости
+        +e.item
+          +e.link(href="page.html") Услуги 
+        +e.item
+          +e.link(href="page-glossary.html") Продукция
+        +e.item
+          +e.link(href="page.html") Тех.регламенты 
+    // First menu
+    +b.menu--first    
+      +e.UL.list    
+        +e.item
+          +e.link(href="page.html") О компании 
+        +e.item
+          +e.link(href="page.html") FAQ
+        +e.item
+          +e.link(href="page.html") Вопросы
+        +e.item 
+          +e.link(href="page-news.html") Отзывы
+        +e.item
+          +e.link(href="page-contacts.html") Контакты 
+        //- +e.item--search
+        //-   +e.link(href="#") Поиск
+    // City
+    +b.city 
+      +e.name-wrapper 
+        +e.link--name(href="page-сontacts.html") Санкт-Петербург
+      +e.tel-wrapper 
+        +e.link--tel(href="tel:+78123350511", target="_blank") (812) 335-05-11
+        +e.link--tel(href="tel:+78129238223", target="_blank") (812) 923-82-23
+      +e.email-wrapper 
+        +e.link--email(href="mailto:info@ros-test.ru", target="_blank") info@ros-test.ru
+
+// After footer
++b.SECTION.after-footer
+  +e.inner.container
+    +b.counters
+      +e.item
+        img(src="img/counter.jpg", alt="counter", title="counter")
+    +b.copyright Copyright © 2006—2015 «РосТест» («rostest») - сертификация продукции, сертификат соответствия гост Р, отказные письма
+// Overlay
++b.overlay

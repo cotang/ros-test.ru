@@ -1,0 +1,30 @@
+.sidebar{
+  max-width: 280px;
+  flex: 0 0 280px;
+  @include mq($from:xs, $until:md){
+    margin: 0 auto;
+  }
+
+  &__form{
+    .form{
+      margin:0 20px;
+    }
+    .btn--form{
+      &:before{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        @include sprite($s-icon-doc); 
+      }
+    }
+    .recaptcha{  
+      position: relative;
+      top: -15px;
+      transform: scale(0.65);
+    }
+    .captcha{  
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.page{
+  margin-top: 60px;
+
+  @include mq($from:xs, $until:lg){
+    margin: 20px 0 0;
+  }
+
+  &__form{
+    flex: 0 0 50%;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
+    }
+
+    .form{
+      margin:0 20px; 
+      @include mq($from:xs, $until:lg){
+        margin:0 auto;
+      }           
+    }
+    .form-group{
+      flex: 0 0 50%;
+      @include mq($from:xs, $until:sm){
+        flex: 0 0 100%;
+        max-width: 240px;
+        margin: 0 auto 10px;
+      }
+    }
+    .btn--form{
+      margin-bottom: 30px;
+      &:before{
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+    .recaptcha{
+      flex: 0 0 100%;
+      position: relative;
+      top: -10px;
+      transform: scale(0.65);
+
+      @include mq($from:xs, $until:sm){
+        position: relative;
+        top: -5px;
+        left: -35px;
+        transform: scale(0.65);
+      }
+    }
+    .captcha{
+      margin-bottom: 0;   
+    }
+  }
+
+  &__inner{
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 0 50px;
+    @include mq($from:xs, $until:md){
+      padding: 0 20px;
+    }       
+  }
+  &__bottom{
+    flex: 0 0 100%;
+    padding: 0 50px;
+    background-image: url(../img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    outline: 1px solid $white;
+    outline-offset: -5px;
+    display: flex;
+    flex-wrap: nowrap;
+    @include mq($from:xs, $until:lg){
+      flex-wrap: wrap;
+    }
+  }
+}

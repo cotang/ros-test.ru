@@ -1,0 +1,25 @@
+.navigation{
+  flex: 0 0 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__link{
+    width: 35%;
+    &:first-of-type{
+      text-align: left;
+      &:before{
+        content: "←";  
+        margin-right: 5px;    
+      }
+    }
+    &:last-of-type{
+      text-align: right;
+      &:after{
+        content: "→";
+        margin-left: 5px;      
+      }      
+    }
+  } 
+}

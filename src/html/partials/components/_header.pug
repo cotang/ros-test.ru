@@ -1,0 +1,94 @@
+include ../abstracts/bemto/bemto.pug
+
+// Header
++b.HEADER.header
+  +e.inner.container
+    // Logo
+    +b.logo
+      +e.A.img(href="index.html")       
+        img(src="img/logo.png", alt="logo", title="logo")
+    +b.NAV.nav
+      // Hamburger
+      +e.hamburger
+        +b.A.hamburger(href="#")
+          span
+      // First menu
+      +b.menu--first     
+        +e.UL.list    
+          +e.item
+            +e.link(href="page.html") О компании 
+          +e.item
+            +e.link(href="page.html") FAQ
+          +e.item 
+            +e.link(href="page-news.html") Отзывы
+          +e.item
+            +e.link(href="page-contacts.html") Контакты 
+      // Search
+      +b.search
+        +e.FORM.form(action='', method='', id= 'form--search')
+          +e.INPUT.input(type='text', name='Поиск', placeholder='Поиск по сайту')
+          +e.BUTTON.btn(type='submit')
+      // Second menu
+      +b.menu--second         
+        +e.UL.list
+          +e.item
+            +e.link(href="index.html") Главная
+          +e.item 
+            +e.link(href="page-news.html") Новости
+          +e.item
+            +e.link(href="page.html") Услуги 
+          +e.item
+            +e.link(href="page-glossary.html") Продукция
+          +e.item
+            +e.link(href="page.html") Тех.регламенты 
+    // City
+    +b.city 
+      +e.name-wrapper 
+        +e.link--name(href="page-сontacts.html") Санкт-Петербург
+      +e.tel-wrapper 
+        +e.link--tel(href="tel:+78123350511", target="_blank") (812) 335-05-11
+        +e.link--tel(href="tel:+78129238223", target="_blank") (812) 923-82-23
+      +e.email-wrapper 
+        +e.link--email(href="mailto:info@ros-test.ru", target="_blank") info@ros-test.ru
+
+// After header
++b.SECTION.after-header
+  +e.inner.container               
+    // Header form 
+    +e.form 
+      include _form--question.pug
+      +e.after-header__clarification Вы получите ответ на свой e-mail в течение 2-х часов
+    // Promo 
+    +b.promo
+      +e.UL.list
+        +e.item--01
+          img(src= "img/promo/slide1.jpg" alt="slide1" title="slide1")
+          +e.A.link(href="page.html") Сертификация и декларирование ТР ТС
+        +e.item--02
+          img(src= "img/promo/slide2.jpg" alt="slide2" title="slide2")
+          +e.A.link(href="page.html") Сертификация ГОСТ Р
+        +e.item--03
+          img(src= "img/promo/slide3.jpg" alt="slide3" title="slide3")
+          +e.A.link(href="page.html") Свидетельства о гос.регистрации продукции
+        +e.item--04
+          img(src= "img/promo/slide4.jpg" alt="slide4" title="slide4")
+          +e.A.link(href="page.html") Пожарная сертификация
+        +e.item--05
+          img(src= "img/promo/slide5.jpg" alt="slide5" title="slide5")
+          +e.A.link(href="page.html") Технические условия
+      +e.description
+        +e.text--01
+          +e.H3.title Lorem ipsum dolor sit amet1
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+        +e.text--02
+          +e.H3.title Lorem ipsum dolor sit amet2
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+        +e.text--03
+          +e.H3.title Lorem ipsum dolor sit amet3
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+        +e.text--04
+          +e.H3.title Lorem ipsum dolor sit amet4
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+        +e.text--05
+          +e.H3.title Lorem ipsum dolor sit amet5
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur

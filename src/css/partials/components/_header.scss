@@ -1,0 +1,88 @@
+.header{
+  background-color: $blue;
+  // @include mq($from:xs, $until:lg){
+  //   padding: 0 20px;
+  // }
+  &__inner{
+    padding: 15px 0 5px;
+    display: flex;
+    justify-content: space-between;
+    // @include mq($from:xs, $until:lg){
+    //   flex-wrap: wrap;
+    //   justify-content: center;
+    //   margin: 20px 20px 0;
+    // }
+  }
+}
+
+.logo{
+  margin-top: 20px;
+  // flex: 0 0 33%;
+  text-align: left;
+  @include mq($from:xs, $until:lg){
+    // flex: 0 0 50%;
+    margin-top: 0;
+    text-align: center;
+  }
+  @include mq($from:xs, $until:sm){
+    // flex: 0 0 100%;
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    @include mq($from:xs, $until:lg){
+      margin: 0 auto;
+    }   
+  }
+}
+
+.city{
+  font-size: $font-size;
+  // flex: 0 0 33%;
+  text-align: left;
+  @include mq($from:sm, $until:lg){
+    // flex: 0 0 50%;
+  }
+  @include mq($from:xs, $until:sm){
+    // flex: 0 0 100%;
+    // text-align: center;
+    // margin-top: 25px;
+  }
+  &__link{
+    display: block;
+    color: $white;
+    margin-bottom: 5px;
+    position: relative;
+    &:before{
+      content: "";
+      display: inline-block;
+      vertical-align: bottom;
+      margin-bottom: 3px;
+      position: absolute;  
+      bottom: 0;
+      left: -15px;
+      transform: translateX(-50%);  
+    } 
+    &--name{
+      &:before{
+        @include sprite($s-icon-point-map); 
+      }      
+    } 
+    &--tel{
+      &:before{
+        @include sprite($s-icon-mob); 
+      }      
+    } 
+    &--email{
+      &:before{
+        @include sprite($s-icon-mail-fly); 
+      }      
+    } 
+    &:hover,  &:focus {
+      color: $white;
+      text-decoration: underline;
+    }     
+  }
+}

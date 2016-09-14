@@ -1,0 +1,122 @@
+.after-header{
+  background-image: url(../img/block2-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  &__inner{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // @include mq($from:xs, $until:lg){
+    //   flex-wrap: wrap;
+    //   justify-content: center;
+    //   margin: 20px 20px 0;
+    // }
+  }
+  &__form{
+    flex: 0 0 30%;
+    padding-right: 30px;
+    font-size: $font-size-smaller;
+    .form{
+      background-image: url(../img/form-bg1.png);
+      background-repeat: repeat;
+    }
+    .form__title{
+      font-size: $font-size-big;
+      font-weight: $regular;
+      padding: 10px 0;
+    }
+    .form__input{
+      padding: 5px 10px;
+    }
+    .form__textarea{
+      max-height: 100px;
+    }
+    .help-block{
+      color: $white;
+      margin-bottom: 0;
+    }
+    .form-group{
+      margin-bottom: 15px;
+    }
+    .recaptcha{
+      margin-bottom: 0;
+    }
+    .captcha{
+      margin-bottom: 0;
+    }
+    .btn--form{
+      border-image: url(../img/form-bg1.png) 3 repeat;
+      margin: 10px 0;
+      &:active{
+        border-image: none;
+      }
+    }
+  }
+  &__clarification{
+    background-image: url(../img/form-bg2.png);
+    background-repeat: repeat;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    text-align: center;
+  }
+}
+
+.promo{
+  flex: 0 0 70%;
+  &__list{
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+
+  }
+  &__item{
+    flex: 0 0 20%;
+    position: relative;
+    overflow: hidden;
+    @include transition();
+    &:hover{
+      .promo__link{
+        bottom: 0;
+      }
+      img{
+        transform: scale(1.2);
+      }
+    }
+    img{
+      @include transition();
+    }
+  }
+  &__link{
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    color: $white;
+    padding: 5px;
+    min-height: 80px;
+    &:hover,  &:focus {
+      color: $white;
+    }
+  }
+  &__description{
+    background-color: $body-bg;
+    padding: 10px;
+  }
+  &__text{
+    display: none;
+    &--01{
+      display: block;
+    }
+    p{
+      margin: 0;
+    }
+  }
+  &__title{
+    margin-top: 0;
+  }
+}

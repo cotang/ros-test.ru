@@ -1,0 +1,26 @@
+.news{
+  margin-bottom: 30px;
+  &__date{
+    font-size:  $font-size-small;
+  }
+  &__title{
+    margin: 0 0 30px;
+    font-weight: $semibold;
+    font-size: $font-size-title;
+    // @include mq($from:xs, $until:sm){
+    //   font-size: $font-size-promo;
+    // }     
+  }
+  &__subtitle{
+    font-weight: $semibold;
+    font-size: $font-size-subtitle;  
+  }
+
+  &__more-link{
+    display: block;
+    margin-top: 15px;
+    font-size:  $font-size-small; 
+
+  }
+}
+
