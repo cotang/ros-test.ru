@@ -3,42 +3,92 @@
   margin-top: 40px;
   &__title{
     flex: 0 0 100%;
+    margin: 20px 0;
     text-transform: uppercase;
     color: $blue;
     font-size: $font-size-title;
     font-weight: $bold;
+    position: relative;
+    @include mq($from:xs, $until:md) {
+      font-size: $font-size-subtitle;
+    } 
     &:before{
       content: '';
       display: block;
       border-top: 1px solid $blue;
-      position: relative;
-      top: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
       z-index: 1;
+      transform: translateY(-50%);
     }
     span{
       padding: 0 50px;
       position: relative;
       background-color: $body-bg;
       z-index: 2;
+      display: inline-block;
+      @include mq($from:xs, $until:md) {
+        padding: 0 20px;
+      }
+      @include mq($from:xs, $until:sm) {
+        max-width: 250px;
+      } 
     }
   }
   &__table{
+    margin-top: 50px;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
   }
-  &__form{
-    display: none;
+  &__steps-wrapper{
+    flex: 0 0 72%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    @include mq($from:xs, $until:md) {
+      padding: 0;
+    } 
+  }
+  .help-banner{
+    flex: 0 0 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    margin: 20px 10px 0;
+    @include mq($from:xs, $until:md) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 0 20px;
+    }  
   }
 }
 .step{
-  flex: 0 0 calc(18% - 20px);
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
   margin: 0 10px;
   background-color: $body-bg;
   border: 2px solid $blue;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  @include mq($from:xs, $until:xl) {
+    font-size: $font-size-smaller ;
+  }
+  @include mq($from:xs, $until:md) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0 0 20px;
+  } 
   &__title{
-    padding-left: 10px;
+    flex: 0 0 100%;
     margin: 10px 0;
+    padding: 0 10px;
     text-transform: uppercase;
     color: $blue;
     font-size: $font-size-bigger;
@@ -47,14 +97,19 @@
     // display: none;
     display: block;
     width: 100%;
+    flex: 0 0 100%;
     min-height: 300px;
     text-align: center;
     position: relative;
+    @include mq($from:xs, $until:md) {
+      min-height: 100px;
+    }
+
     span{
       position: absolute;
-      top: 50px;
+      top: 40%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       display: block;
       &:before{
         content: "";
@@ -67,6 +122,7 @@
   &__list{
     // display: block;
     display: none;
+    flex: 0 0 100%;
     text-align: left;
     padding-left: 0;
     list-style-type: none;
@@ -80,21 +136,10 @@
     }
   }
   &__item{
-    position: relative;
     margin-left: 20px;
     margin-right: 5px;
     padding-left: 5px;
-    &:before{
-      content: "";
-      position: absolute;
-      left: -0.6em;
-      top: 0.55em;
-      margin-right: 0.4em;
-      width: 0.4em;
-      height: 0.4em;
-      border-radius: 50%;
-      background-color: $red;
-    }
+
     &:hover, &:focus, &:active{
       cursor: pointer;
       color: $text-color-white;
@@ -112,18 +157,45 @@
   }
   &--total{
     flex: 0 0 calc(28% - 20px);
+    max-width: calc(28% - 20px);
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 calc(100% - 60px);
+      max-width: calc(100% - 60px);
+      margin: 20px 30px;
+    }
     .step__title{
       color: $red;
     }
-    .step__list{
-
-    }
     .step__item{
+      color: $text-color;
+      background-color: $body-bg;
       &:hover, &:focus, &:active{
         cursor: auto;
         color: $text-color;
         background-color: $body-bg;
       }      
     }
+    .step__nothing{
+      min-height: 400px;
+      @include mq($from:xs, $until:lg){
+        min-height: 100px;
+      }
+    }
+  }
+  &__btn{
+    margin-top: 20px;
+    &:before{
+      content: none;
+    } 
+  }
+  .btn{
+    white-space: normal;
+    margin: 0 20px;
+    text-align: center;
+  }
+  &__description{
+    text-align: center;
+    color: $blue;
+    margin: 10px 0 15px;
   }
 }

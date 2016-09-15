@@ -3,16 +3,24 @@
   margin-top: 40px;
 
   &__title{
+    margin: 20px 0;
     text-transform: uppercase;
     color: $blue;
     font-size: $font-size-title;
     font-weight: $bold;
+    position: relative;
+    @include mq($from:xs, $until:md) {
+      font-size: $font-size-subtitle;
+    } 
     &:before{
       content: '';
       display: block;
       border-top: 1px solid $blue;
-      position: relative;
-      top: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 1;
     }
     span{
@@ -20,8 +28,15 @@
       position: relative;
       background-color: $body-bg;
       z-index: 2;
+      display: inline-block;
+      @include mq($from:xs, $until:md) {
+        padding: 0 20px;
+      }
+      @include mq($from:xs, $until:sm) {
+        max-width: 250px;
+      } 
     }
-  } 
+  }
   &__list{
     list-style-type: none;
     padding-left: 0;
@@ -38,6 +53,18 @@
     text-align: center;
     padding: 20px 10px 0;
     position: relative;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 50%;
+      max-width: 50%;
+    }  
+    @include mq($from:xs, $until:sm){
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+    } 
+    &:before{
+      content: none;
+    }
     &:after{
       content: "";
       position: absolute;
@@ -47,6 +74,9 @@
       width: 1px;
       height: 200px;
       background-color: $grey-border;
+      @include mq($from:xs, $until:lg){
+        content: none;
+      }  
     }
     &:last-child:after{
       content: none;
@@ -82,10 +112,13 @@
       font-size: $font-size-big;
       display: inline-block; 
       max-width: 160px; 
-      min-height: 60px;    
+      min-height: 60px;
     }
     span.wider{
       max-width: inherit;
+      @include mq($from:xs, $until:lg){
+        max-width: 240px; 
+      } 
     }
   }
   &__icon{

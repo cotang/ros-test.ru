@@ -49,5 +49,23 @@ img {
   font-weight: 700;
 }
 
+li{
+  list-style-type: none;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    left: -0.8em;
+    top: 0.55em;
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    background-color: $red;
+  }
+}
 
-
+.container{
+  @include mq($from:xs, $until:lg){
+    padding: 0 20px;
+  }
+}

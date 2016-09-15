@@ -1,31 +1,26 @@
 .header{
   background-color: $blue;
-  // @include mq($from:xs, $until:lg){
-  //   padding: 0 20px;
-  // }
+
   &__inner{
     padding: 15px 0 5px;
     display: flex;
     justify-content: space-between;
-    // @include mq($from:xs, $until:lg){
-    //   flex-wrap: wrap;
-    //   justify-content: center;
-    //   margin: 20px 20px 0;
-    // }
+    @include mq($from:xs, $until:lg){
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
+    }
   }
 }
 
 .logo{
   margin-top: 20px;
-  // flex: 0 0 33%;
   text-align: left;
   @include mq($from:xs, $until:lg){
-    // flex: 0 0 50%;
+    flex: 0 0 100%;
     margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
-  }
-  @include mq($from:xs, $until:sm){
-    // flex: 0 0 100%;
   }
   &__img{
     display: block;
@@ -40,29 +35,25 @@
 
 .city{
   font-size: $font-size;
-  // flex: 0 0 33%;
   text-align: left;
   @include mq($from:sm, $until:lg){
-    // flex: 0 0 50%;
+    flex: 0 0 50%;
+    text-align: center;
   }
   @include mq($from:xs, $until:sm){
-    // flex: 0 0 100%;
-    // text-align: center;
-    // margin-top: 25px;
+    flex: 0 0 100%;
+    text-align: center;
   }
   &__link{
     display: block;
     color: $white;
     margin-bottom: 5px;
-    position: relative;
     &:before{
       content: "";
       display: inline-block;
       vertical-align: bottom;
       margin-bottom: 3px;
-      position: absolute;  
-      bottom: 0;
-      left: -15px;
+      margin-right: 5px;
       transform: translateX(-50%);  
     } 
     &--name{

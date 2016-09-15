@@ -1,17 +1,25 @@
 .after-footer{
   background-color: $blue;
-  padding-bottom: 10px;
+
   &__inner{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-end;
+    @include mq($from:xs, $until:lg){
+      flex-wrap: wrap;
+      padding: 10px 20px 0;
+    }
   }
 }
 .copyright{
   color: $black-000;
   font-size: $font-size-smaller;
+  padding-bottom: 10px;
+
 }
 
-
+.counters{
+  padding-bottom: 10px;
+}
 

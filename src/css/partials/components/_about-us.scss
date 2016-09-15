@@ -3,16 +3,24 @@
   margin-top: 40px;
 
   &__title{
+    margin: 20px 0;
     text-transform: uppercase;
     color: $blue;
     font-size: $font-size-title;
     font-weight: $bold;
+    position: relative;
+    @include mq($from:xs, $until:md) {
+      font-size: $font-size-subtitle;
+    } 
     &:before{
       content: '';
       display: block;
       border-top: 1px solid $blue;
-      position: relative;
-      top: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 1;
     }
     span{
@@ -20,6 +28,13 @@
       position: relative;
       background-color: $body-bg;
       z-index: 2;
+      display: inline-block;
+      @include mq($from:xs, $until:md) {
+        padding: 0 20px;
+      }
+      @include mq($from:xs, $until:sm) {
+        max-width: 250px;
+      } 
     }
   }
 }

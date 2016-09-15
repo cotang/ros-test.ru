@@ -3,6 +3,9 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
+  @include mq($from:xs, $until:lg){
+    padding: 20px 0;
+  }
   &__inner{
     padding: 20px 0;
     display: flex;
@@ -16,8 +19,14 @@
   }
   &__form{
     flex: 0 0 30%;
+    max-width: 30%;
     padding-right: 30px;
     font-size: $font-size-smaller;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }    
     .form{
       background-image: url(../img/form-bg1.png);
       background-repeat: repeat;
@@ -42,10 +51,14 @@
     }
     .recaptcha{
       margin-bottom: 0;
+      @include mq($from:lg, $until:xl){
+        transform: scale(0.75);
+      }  
+      @include mq($from:xs, $until:sm){
+        transform: scale(0.65);
+      }  
     }
-    .captcha{
-      margin-bottom: 0;
-    }
+
     .btn--form{
       border-image: url(../img/form-bg1.png) 3 repeat;
       margin: 10px 0;
@@ -60,18 +73,30 @@
     text-transform: uppercase;
     padding: 5px 20px;
     text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
 .promo{
   flex: 0 0 70%;
+  max-width: 70%;
+  @include mq($from:xs, $until:lg){
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include mq($from:xs, $until:md){
+    display: none;
+  }  
   &__list{
     padding-left: 0;
     list-style-type: none;
     margin: 0;
     display: flex;
     flex-wrap: nowrap;
-
   }
   &__item{
     flex: 0 0 20%;

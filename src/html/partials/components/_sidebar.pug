@@ -1,12 +1,12 @@
-extends partials/templates/template.pug
+include ../abstracts/bemto/bemto.pug
 
-+e.ASIDE.sidebar
-  +b.services
++b.ASIDE.sidebar
+  +b.NAV.services
     +e.H2.title Услуги 
     +e.UL.list
       +e.item
         +e.link(href="#") Сертификаты и декларации
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Сертификат соответствия ГОСТ Р
           +e.item 
@@ -29,7 +29,7 @@ extends partials/templates/template.pug
             +e.link(href="page.html") Сертификат Евро 5
       +e.item 
         +e.link(href="#") Документы от Роспотребнадзора
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Свидетельство о Государственной Регистрации
           +e.item 
@@ -38,7 +38,7 @@ extends partials/templates/template.pug
             +e.link(href="page.html") Отказное письмо
       +e.item
         +e.link(href="#") Документы от Ростехнадзора
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Экспертиза промышленной безопасности
           +e.item 
@@ -47,7 +47,7 @@ extends partials/templates/template.pug
             +e.link(href="page.html") Отказное письмо
       +e.item
         +e.link(href="#") Отказные письма
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Отказное письмо
           +e.item 
@@ -56,7 +56,7 @@ extends partials/templates/template.pug
             +e.link(href="page.html") Отказные письма в области пожарной безопасности
       +e.item
         +e.link(href="#") Сертификация ИСО 
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Сертификат соответствия ГОСТ Р ISO 9001
           +e.item 
@@ -65,7 +65,7 @@ extends partials/templates/template.pug
             +e.link(href="page.html") Сертификат соответствия ГОСТ Р OHSAS
       +e.item
         +e.link(href="#") Другие документы о соответствии
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Сертификат происхождения
           +e.item 
@@ -90,14 +90,14 @@ extends partials/templates/template.pug
             +e.link(href="page.html") Энергетический аудит
       +e.item 
         +e.link(href="#") Техническая документация
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Разработка и регистрация технических условий (ТУ)
           +e.item 
             +e.link(href="page.html") Технический регламент в России
       +e.item
         +e.link(href="#") Сертификация продукции 
-        +b.UL.submenu
+        +b.UL.services-submenu
           +e.item
             +e.link(href="page.html") Ацетон
           +e.item 

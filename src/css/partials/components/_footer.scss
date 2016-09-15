@@ -4,6 +4,12 @@
     padding: 15px 0 5px;
     display: flex;
     justify-content: space-between;
+    @include mq($from:xs, $until:lg){
+      padding: 15px 20px 5px;
+    }
+    @include mq($from:xs, $until:md){
+      flex-wrap: wrap;
+    }
   }
   .nav{
     flex: 0 0 auto;
@@ -11,6 +17,11 @@
   .logo{
     flex: 0 0 25%;
     max-width: 25%;
+    @include mq($from:xs, $until:md){
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
   }
   .logo__img{
     max-width: 230px;
@@ -18,6 +29,11 @@
   .menu{
     flex: 0 0 25%;
     max-width: 25%;
+    @include mq($from:xs, $until:md){
+      flex: 0 0 50%;
+      max-width: 50%;
+      text-align: center;
+    }
   }
   .menu__list{
     display: block;
@@ -27,6 +43,11 @@
   .city{
     flex: 0 0 25%;
     max-width: 25%;
+    @include mq($from:xs, $until:md){
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 20px;
+    }
   }
 }
 

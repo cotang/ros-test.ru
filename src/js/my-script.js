@@ -8,8 +8,41 @@ jQuery(document).ready(function($){
   /* Hamburger */
   $('.hamburger').click(function(e){
     e.preventDefault();
-    $('.menu').toggle();
+    $('.header .menu').toggle();
   }); 
+
+  /* Dropdown menu level1 */
+  $('.menu__link--closed').click(function(e){
+    e.preventDefault();
+    if($(this).next('.menu-submenu').is(":visible")) {
+      $(this).next('.menu-submenu').hide();
+      $(this).removeClass('menu__link--open');
+    } else {
+      $(this).closest('.menu__list').find('.menu-submenu').hide();
+      $(this).siblings('.menu-submenu').show();
+      $(this).closest('.menu__list').find('.menu__link--open').removeClass('menu__link--open');
+      $(this).addClass('menu__link--open');
+    }
+  }); 
+  /* Dropdown menu level2 */
+  $('.menu-submenu__link--closed').click(function(e){
+    e.preventDefault();
+    if($(this).next('.menu-sub-submenu').is(":visible")) {
+      $(this).next('.menu-sub-submenu').hide();
+      $(this).removeClass('menu-submenu__link--open');
+    } else {
+      $(this).closest('.menu-submenu').find('.menu-sub-submenu').hide();
+      $(this).siblings('.menu-sub-submenu').show();
+      $(this).closest('.menu-submenu').find('.menu-submenu__link--open').removeClass('menu-submenu__link--open');
+      $(this).addClass('menu-submenu__link--open');
+    }
+  }); 
+
+
+  /* moving "search" down on cellphone */
+  if ($(window).width() <= 540) {
+    $('.search').appendTo('.nav');
+  }  
 
     // Promo - tabs
   $('.promo__item').on('mouseenter', function() { 
@@ -72,46 +105,55 @@ jQuery(document).ready(function($){
   });
 
   /* gallery "news" */
-  $('.news-section__gallery').slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '0',      
-    // variableWidth: true
-  });
+  if ($(window).width() <= 768) {
+    $('.news-section__gallery').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '0'
+    });
+  } else if ($(window).width() <= 1024) {
+    $('.news-section__gallery').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '0'
+    });    
+  } else {
+    $('.news-section__gallery').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '0'
+    });
+  }
 
   /* Selection process */
   $('.step__item').on('click', function() { 
     $(this).siblings().removeClass('step__item--active');
-    $(this).addClass('step__item--active'); 
-    var dataStep = $(this).data('step');
-    var nextStep = $(this).closest('.step').next('.step');
-    $(nextStep).find('.step__nothing').hide()
-      .siblings('.step__list').hide()
-      .siblings('.step__list--'+dataStep).show();
-    if ($(nextStep).has('.step__list--person')) {
-      $(nextStep).children('.step__list--person').show();
-    }
+    $(this).addClass('step__item--active');
+    $(this).closest('.step').next('.step')
+      .find('.step__nothing').hide()
+      .siblings('.step__list').show();
 
-    var dataPerson = $(this).data('person');
-    $('#product-type').val(dataStep);
-    $('#customer-status').val(dataPerson);
+    if ($(this).closest('.step').hasClass('step--04')) {
+      $(this).closest('.selection__table').find('.step--total')
+        .find('.step__nothing').hide()
+        .siblings('.step__list--total').show();
+    }
   }); 
 
-
-
-  /* Side fixed menu */
-  $('.side-fixed-menu__link--toggle').click(function(e){
-    e.preventDefault(); 
-    var sideFixedDetails = $(this).siblings($('.side-fixed-details'));    
-    if($(sideFixedDetails).is(":visible")){
-      $(sideFixedDetails).hide(); 
-    } else if($('.side-fixed-details:not(sideFixedDetails)').is(":visible")) { 
-      $('.side-fixed-details').hide();
-      $(sideFixedDetails).show();   
-    } else { 
-      $(sideFixedDetails).show();  
+  /* Sidebar services nav menu */
+  $('.services__link').click(function(e){
+    e.preventDefault();
+    if($(this).next('.submenu').is(":visible")) {
+      $(this).next('.submenu').hide();
+    } else {
+      $(this).closest('.services__list').find('.submenu').hide();
+      $(this).next('.submenu').show();      
     }
   }); 
 
