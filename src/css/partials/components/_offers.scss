@@ -89,7 +89,7 @@
     }
     &:nth-child(2){
       .offers__icon:after{
-        @include sprite($s-offers-calc);        
+        @include sprite($s-offers-ask);        
       }
     }
     &:nth-child(3){
