@@ -1,0 +1,15 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--questions.container
+    +e.inner
+      // Content
+      +b.SECTION.content
+        +e.H1.title Вопросы клиентов
+        include partials/components/_questions.pug
+        include partials/components/_help-banner.pug
+      // Sidebar
+      include partials/components/_sidebar.pug
+
+
+  

@@ -1,20 +1,23 @@
-.questions{ 
-  margin-top: 40px;
-}
-
 .question{  
   margin-bottom: 20px;
   &__date{
     margin-bottom: 20px;
+    font-size:  $font-size-smaller;
   }
   &__title{
-    margin: 0 0 20px;
     font-weight: $bold;
-    font-size: $font-size-title;   
+    font-size: $font-size-title; 
+    margin: 30px 0;
+    text-transform: uppercase;
+    color: $blue;
+    border-bottom: 2px solid $blue;
   }
   &__subtitle{
     font-weight: $bold;
     font-size: $font-size-subtitle;
+    a{
+      color: $blue; 
+    } 
   }
   &__link{
     display: inline-block;
@@ -29,8 +32,8 @@
     text-decoration: underline;
   }
   &__answer{
-    border-left: 2px solid #9e9e9e;
-    background-color: $grey-border;
+    border-left: 2px solid $grey;
+    background-color: $grey-bg;
     padding: 10px 20px;
   } 
   &__person{

@@ -28,6 +28,10 @@
       background-color: $body-bg;
       z-index: 2;
       display: inline-block;
+      color: $blue;
+      &:hover, &:focus {
+        color: $blue;
+      }      
       @include mq($from:xs, $until:md) {
         padding: 0 20px;
       }

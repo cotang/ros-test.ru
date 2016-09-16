@@ -1,0 +1,14 @@
+.review{
+  &__person{
+    font-weight: $semibold;
+    span{
+      font-weight: $regular;
+    }
+  }
+  &__text{
+    font-weight: $semibold;
+    span{
+      font-weight: $regular;
+    }
+  }
+}

@@ -1,26 +1,39 @@
 .news{
   margin-bottom: 30px;
   &__date{
-    font-size:  $font-size-small;
+    font-size:  $font-size-smaller;
+  }
+  &__img{
+    float: right;
+    margin-left: 15px;
+    width: 300px;
+    height: auto;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &__title{
-    margin: 0 0 30px;
     font-weight: $semibold;
     font-size: $font-size-title;
-    // @include mq($from:xs, $until:sm){
-    //   font-size: $font-size-promo;
-    // }     
+    margin: 30px 0;
+    text-transform: uppercase;
+    color: $blue;
+    border-bottom: 2px solid $blue;    
   }
   &__subtitle{
     font-weight: $semibold;
-    font-size: $font-size-subtitle;  
+    font-size: $font-size-subtitle;
+    a{
+      color: $blue; 
+    } 
   }
-
   &__more-link{
     display: block;
     margin-top: 15px;
     font-size:  $font-size-small; 
-
   }
 }
 

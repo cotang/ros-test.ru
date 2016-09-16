@@ -62,10 +62,35 @@ mixin form(items)
             +e.TEXTAREA.textarea(type='text', name='Ваш отзыв', placeholder='Ваш отзыв*')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
-        .form-group.field-region.required
-          +e.INPUT.input(type='text', name='Регион', placeholder='Ваш регион*')
-          p.help-block.help-block-error Ошибка заполнения поля формы
+        if !item.review    
+          .form-group.field-country.required
+            +e.SELECT.country-list
+              option Россия
+              option Беларусь
+              option Казахстан
+              option Украина
+              option Азербайджан
+              option Армения    
+              option Грузия
+              option Молдавия
+          .form-group.field-region.required
+            +e.SELECT.region-list
+              option Санкт-Петербург и Ленинградская область
+              option Москва и Московская область
+              option Новгородская область
+              option Псковская область
+              option Республика Карелия
+              option Мурманская область
+              option Калининградская область
+              option Вологодская область
+              option Тверская область
+          //- .form-group.field-region.required
+          //-   +e.INPUT.input(type='text', name='Регион', placeholder='Ваш регион*')
+          //-   p.help-block.help-block-error Ошибка заполнения поля формы
         .form-group.recaptcha
           +b.captcha
         +b.BUTTON.btn--form(type='submit') #{item.button}
         p.help-block.help-block-success #{item.success}
+
+
+

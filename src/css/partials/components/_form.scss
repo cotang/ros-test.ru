@@ -23,6 +23,12 @@
     padding: 8px 10px; 
     width: 100%;
     border: 1px solid $grey-border;
+    &::-webkit-input-placeholder{
+      color: $text-color;        
+    }       
+    &::placeholder{
+      color: $text-color;         
+    } 
     &:focus::-webkit-input-placeholder{
       color: transparent;         
     }       
@@ -39,6 +45,12 @@
     width: 100%;
     border: 1px solid $grey-border;
     height: 150px;
+    &::-webkit-input-placeholder{
+      color: $text-color;        
+    }       
+    &::placeholder{
+      color: $text-color;         
+    } 
     &:focus::-webkit-input-placeholder{
       color: transparent;         
     }       
@@ -46,9 +58,18 @@
       color: transparent;         
     } 
   }
+  &__region-list{
+    padding: 5px 10px; 
+    width: 100%;
+    border: 1px solid $grey-border;
+  }
+  &__country-list{
+    padding: 5px 10px; 
+    width: 100%;
+    border: 1px solid $grey-border;
+  }
   .recaptcha{
     flex: 0 0 100%;
-    margin-bottom: 0;
   } 
 }
 

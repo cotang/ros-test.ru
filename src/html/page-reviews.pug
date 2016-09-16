@@ -1,0 +1,18 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--reviews.container
+    +e.inner
+      // Content
+      +b.SECTION.content
+        +e.H1.title Отзывы
+        include partials/components/_form--review.pug
+        // Reviews
+        +e.reviews
+          include partials/components/_reviews.pug
+        include partials/components/_help-banner.pug   
+      // Sidebar
+      include partials/components/_sidebar.pug
+
+
+  

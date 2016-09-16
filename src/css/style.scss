@@ -25,9 +25,8 @@
 @import "partials/components/btn";
 @import "partials/components/overlay";
 @import "partials/components/help-banner";
+@import "partials/components/pagination";
 
-// @import "partials/components/pagination";
-// @import "partials/components/navigation";
 // @import "partials/components/glossary";
 
 @import "partials/components/header";
@@ -38,19 +37,17 @@
 @import "partials/components/after-footer";
 
 
-
 // Components
 @import "partials/components/about-us";
 @import "partials/components/selection";
 @import "partials/components/reasons";
 @import "partials/components/offers";
 @import "partials/components/news-section";
-
+// Sidebar
 @import "partials/components/services";
-// @import "partials/components/clients";
-// @import "partials/components/reviews";
 
 
-// @import "partials/components/office";
-// @import "partials/components/question";
-// @import "partials/components/news";
+@import "partials/components/office";
+@import "partials/components/review";
+@import "partials/components/question";
+@import "partials/components/news";

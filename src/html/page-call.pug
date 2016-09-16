@@ -1,0 +1,16 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--call.container
+    +e.inner
+      // Content
+      +b.SECTION.content
+        +e.H1.title Заказ звонка
+        +e.text
+          p Вы можете заказать звонок с сайта и наш специалист сам перезвонит Вам. Просто заполните форму ниже и нажмите «Заказать»!
+        include partials/components/_form--call.pug
+      // Sidebar
+      include partials/components/_sidebar.pug
+
+
+  

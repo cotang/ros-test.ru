@@ -1,0 +1,16 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--application.container
+    +e.inner
+      // Content
+      +b.SECTION.content
+        +e.H1.title Online заявка
+        +e.text
+          p Вы можете заказать любой документ прямо у нас на сайте! Просто заполните форму ниже и специалист по сертификации просчитает индивидуальную стоимость документа, сроки получения, а также вышлет Вам всю необходимую информацию! 
+        include partials/components/_form--application.pug
+      // Sidebar
+      include partials/components/_sidebar.pug
+
+
+  
