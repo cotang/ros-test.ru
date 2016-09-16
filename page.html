@@ -38,6 +38,7 @@
     <link rel="shortlink" href="#">
     <link type="text/plain" rel="author" href="humans.txt">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="img/favicon_rst.ico" type="image/ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
@@ -67,7 +68,10 @@
                 <a class="menu__link" href="page.html">FAQ</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="page-news.html">Отзывы</a>
+                <a class="menu__link" href="page-questions.html">Вопросы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="page-reviews.html">Отзывы</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="page-contacts.html">Контакты </a>
@@ -460,9 +464,30 @@
                 <textarea class="form__textarea" type="text" name="Ваш вопрос" placeholder="Ваш вопрос*"></textarea>
                 <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
               </div>
+              <div class="form-group field-country required">
+                <select class="form__country-list">
+                  <option>Россия</option>
+                  <option>Беларусь</option>
+                  <option>Казахстан</option>
+                  <option>Украина</option>
+                  <option>Азербайджан</option>
+                  <option>Армения </option>
+                  <option>Грузия</option>
+                  <option>Молдавия</option>
+                </select>
+              </div>
               <div class="form-group field-region required">
-                <input class="form__input" type="text" name="Регион" placeholder="Ваш регион*" />
-                <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                <select class="form__region-list">
+                  <option>Санкт-Петербург и Ленинградская область</option>
+                  <option>Москва и Московская область</option>
+                  <option>Новгородская область</option>
+                  <option>Псковская область</option>
+                  <option>Республика Карелия</option>
+                  <option>Мурманская область</option>
+                  <option>Калининградская область</option>
+                  <option>Вологодская область</option>
+                  <option>Тверская область</option>
+                </select>
               </div>
               <div class="form-group recaptcha">
                 <div class="captcha"></div>
@@ -529,7 +554,7 @@
       <section class="page container">
         <div class="page__inner">
           <!-- Content-->
-          <article class="content">
+          <section class="content">
             <h1 class="content__title">Государственная комиссия по радиочастотам </h1>
             <div class="content__text">
               <p>ГКРЧ (Государственная комиссия по радиочастотам) – это такой координационный межведомственный орган, который действует при Министерстве связи и Министерстве информационных технологий. Данный орган осуществляет регулирование использования
@@ -555,11 +580,11 @@
             </div>
             <!-- Help banner-->
             <div class="help-banner">
-              <div class="help-banner__text">Вы можете заказать этот сертификат прямо на сайте</div>
+              <div class="help-banner__text">Вы можете заказать любой сертификат прямо на сайте</div>
               <div class="help-banner__arrow"> </div>
-              <a class="btn btn--red" href="#">Заказать</a>
+              <a class="btn btn--red" href="page-application.html">Заказать</a>
             </div>
-          </article>
+          </section>
           <!-- Sidebar-->
           <aside class="sidebar">
             <nav class="services">
@@ -1019,7 +1044,10 @@
             <img src="img/counter.jpg" alt="counter" title="counter">
           </div>
         </div>
-        <div class="copyright">Copyright © 2006—2015 «РосТест» («rostest») - сертификация продукции, сертификат соответствия ГОСТ Р, отказные письма</div>
+        <div class="copyright">
+          <p>Copyright © 2006—2015 «РосТест» («rostest») - сертификация продукции, сертификат соответствия ГОСТ Р, отказные письма</p>
+          <p>Вся информация на сайте представлена исключительно в ознакомительных целях и не является публичной офертой, точную информацию уточняйте у специалистов.</p>
+        </div>
       </div>
     </section>
     <!-- Overlay-->
