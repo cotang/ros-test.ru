@@ -10226,11 +10226,11 @@ jQuery(document).ready(function($){
   /* Sidebar services nav menu */
   $('.services__link').click(function(e){
     e.preventDefault();
-    if($(this).next('.submenu').is(":visible")) {
-      $(this).next('.submenu').hide();
+    if($(this).next('.services-submenu').is(":visible")) {
+      $(this).next('.services-submenu').hide();
     } else {
-      $(this).closest('.services__list').find('.submenu').hide();
-      $(this).next('.submenu').show();      
+      $(this).closest('.services__list').find('.services-submenu').hide();
+      $(this).next('.services-submenu').show();      
     }
   }); 
 
