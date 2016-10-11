@@ -63,7 +63,7 @@ var path = {
     // html: ['src/html/**/*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
     html: ['src/html/**/*.pug', '!src/html/**/_*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
     htmlDir: './src/html/',
-    js: 'src/js/*.js',
+    js: 'src/js/**/*.js',
     css: './src/css/*.scss',
     img: ['src/img/**/*.*', '!src/img/png-sprite/*.*'],
     fonts: 'src/fonts/**/*.*',
@@ -124,35 +124,35 @@ gulp.task('sass', function () {
 });
 
 // Compilation js v1
-gulp.task('js', function() {
-  var jsFiles = glob.sync(path.src.browserify);
-  return browserify({
-      entries: jsFiles,
-      extensions: ['.jsx']
-    })
-    .bundle()  
-    .pipe(plumber(function(error) {
-        gutil.log(gutil.colors.red(error.message));
-        this.emit('end');
-    }))
-    .pipe(source('script.js'))
-    .pipe(gulp.dest(path.build.js))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(rename('script.min.js'))    
-    .pipe(gulp.dest(path.build.js))
-    .pipe(reload({stream: true}));
-});
-
-// Compilation js v2 
-// (If jquery is used from 3rd party, and you need to exclude it from script.min.js, you should manually put all required .js files into path.src.js directory)
 // gulp.task('js', function() {
-//   return gulp.src(path.src.js)
-//     .pipe(concat('script.min.js'))
+//   var jsFiles = glob.sync(path.src.browserify);
+//   return browserify({
+//       entries: jsFiles,
+//       extensions: ['.jsx']
+//     })
+//     .bundle()  
+//     .pipe(plumber(function(error) {
+//         gutil.log(gutil.colors.red(error.message));
+//         this.emit('end');
+//     }))
+//     .pipe(source('script.js'))
+//     .pipe(gulp.dest(path.build.js))
+//     .pipe(buffer())
 //     .pipe(uglify())
+//     .pipe(rename('script.min.js'))    
 //     .pipe(gulp.dest(path.build.js))
 //     .pipe(reload({stream: true}));
 // });
+
+//Compilation js v2 
+//(If jquery is used from 3rd party, and you need to exclude it from script.min.js, you should manually put all required .js files into path.src.js directory)
+gulp.task('js', function() {
+  return gulp.src(path.src.js)
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(path.build.js))
+    .pipe(reload({stream: true}));
+});
 
 // Optimization images
 gulp.task('img', function () {

@@ -4,8 +4,8 @@
   &__inner{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     @include mq($from:xs, $until:lg){
       flex-wrap: wrap;
       padding: 10px 20px 0;
@@ -13,13 +13,14 @@
   }
 }
 .copyright{
-  color: $black-000;
+  color: $text-color-white;
   font-size: $font-size-smaller;
-  padding-bottom: 10px;
-
+  padding: 10px 0;
+  margin: 0 20px;
 }
 
 .counters{
-  padding-bottom: 10px;
+  padding: 10px 0;
+  margin: 0 20px;
 }
 

@@ -20,14 +20,14 @@ $screen-xs:                   0; // Extra small screen / phone
 $screen-sm:                   480px; // Small screen / phone
 $screen-md:                   760px; // Medium screen / tablet
 $screen-lg:                   992px; // Large screen / desktop
-$screen-xl:                   1280px; // Extra large screen / wide desktop
+$screen-xl:                   1200px; // Extra large screen / wide desktop
 
 $grid-breakpoints: (
         xs:                   0,
         sm:                   540px,
         md:                   768px,
         lg:                   1024px,
-        xl:                   1300px
+        xl:                   1280px
 ) !default;
 
 
@@ -35,7 +35,7 @@ $container-max-widths: (
         sm:                   480px,
         md:                   760px,
         lg:                   992px,
-        xl:                   1280px
+        xl:                   1200px
 ) !default;
 
 /*
@@ -50,7 +50,7 @@ $mq-breakpoints: (
         sm:                   540px,
         md:                   768px,
         lg:                   1024px,
-        xl:                   1300px
+        xl:                   1280px
 ) !default;
 
 
@@ -63,12 +63,14 @@ $mq-breakpoints: (
 // Color table 
 
 $white:                       #ffffff;
-$black:                       #666666;
+$black:                       #333333;
 $black-000:                   #000000;
 
 $blue:                        #427ac1;
 $blue-darker:                 #35629a;
 $blue-border:                 #2c588f;
+$blue-light-border:           #5399de;
+
 
 $blue-link:                   #0088cc;
 $blue-link-hover:             #005580;
@@ -98,6 +100,8 @@ $error-bg:                    lighten($error, 30%);
 
 $body-bg:                     $white;
 $text-color:                  $black;
+$text-blue:                   #18447a;
+
 
 $link-color:                  $blue-link;
 $link-color--hover:           $blue-link-hover;
@@ -113,8 +117,9 @@ $link-color-white--hover:     darken($link-color-white, 20%);
 //------------------------------------------------------------------------------
 
 $font-family:                   "PT Sans", Arial, sans-serif;
-$font-family-narrow:            "PT Sans Narrow", Arial, sans-serif;
-$font-family-roboto:            Roboto, Arial, sans-serif;
+$font-family-bold:              "PT Sans Bold", Arial, sans-serif;
+$font-family-narrow:            "Roboto Condensed", Arial, sans-serif;
+$font-family-narrow-bold:       "Roboto Bold Condensed", Arial, sans-serif;
 //$font-family--serif:          Georgia, "Times New Roman", Times, serif;
 //$font-family--monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
 

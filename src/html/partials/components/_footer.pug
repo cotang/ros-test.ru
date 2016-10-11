@@ -24,7 +24,7 @@ include ../abstracts/bemto/bemto.pug
       +e.img-wrapper
         +e.img
           img(src="img/managers/spec.jpg" alt="Елена" title="Елена")
-        +b.A.btn(href="#") Спросить он-лайн
+        +b.A.btn--red(href="#", data-form="question") Спросить он-лайн
       +e.info
         +e.P.position Специалист по сертификации
         +e.H3.name Елена Капралова
@@ -77,8 +77,6 @@ include ../abstracts/bemto/bemto.pug
           +e.link(href="page-news.html") Отзывы
         +e.item
           +e.link(href="page-contacts.html") Контакты 
-        //- +e.item--search
-        //-   +e.link(href="#") Поиск
     // City
     +b.city 
       +e.name-wrapper 
@@ -95,8 +93,10 @@ include ../abstracts/bemto/bemto.pug
     +b.counters
       +e.item
         img(src="img/counter.jpg", alt="counter", title="counter")
-    +b.copyright 
-      p Copyright © 2006—2015 «РосТест» («rostest») - сертификация продукции, сертификат соответствия ГОСТ Р, отказные письма
-      p Вся информация на сайте представлена исключительно в ознакомительных целях и не является публичной офертой, точную информацию уточняйте у специалистов.
+    +b.copyright Copyright © 2006—2015 «РосТест» («rostest»)
 // Overlay
-+b.overlay
++b.modal
+  +e.overlay
+  +e.form
+    include _form--application.pug
+    include _form--question.pug

@@ -2,14 +2,14 @@ include ../abstracts/bemto/bemto.pug
 
 +b.SECTION.selection
   +e.H2.title 
-    span Подбор документов он-лайн
+    span Подбор документов онлайн
   +e.table
     +e.steps-wrapper 
       // Step 1
       +b.step--01
         +e.H3.title 1.Выберите раздел
         +e.UL.list
-          +e.item Изделия хозяйствено-бытового назначения, одежда, продукция для детей, игрушки
+          +e.item--active Изделия хозяйствено-бытового назначения, одежда, продукция для детей, игрушки
           +e.item Пищевая промышленность
           +e.item Оборудование промышленное
           +e.item Бытовая техника, осветительное и измерительное оборудование
@@ -30,7 +30,7 @@ include ../abstracts/bemto/bemto.pug
         +e.nothing 
           span Выберите пункт из предыдущего списка
         +e.UL.list
-          +e.item Продукция легкой промышленности
+          +e.item--active Продукция легкой промышленности
           +e.item Игрушки для детей
           +e.item Детская одежда и украшения для детей
           +e.item Санитарно-гигиенические принадлежности для детей
@@ -46,7 +46,7 @@ include ../abstracts/bemto/bemto.pug
         +e.nothing 
           span Выберите пункт из предыдущего списка
         +e.UL.list
-          +e.item Ткани
+          +e.item--active Ткани
           +e.item Одежда
           +e.item Обувь
           +e.item Постельное белье
@@ -62,15 +62,15 @@ include ../abstracts/bemto/bemto.pug
         +e.nothing 
           span Выберите пункт из предыдущего списка
         +e.UL.list
-          +e.item Я - изготовитель
+          +e.item--active Я - изготовитель
           +e.item Я - импортер
           +e.item Я - экспортер
           +e.item Я - продавец
       // Help banner
       +b.help-banner
-        +e.text Нужна помощь специалиста?
+        +e.text Мне нужна помощь специалиста
         +e.arrow 
-        +b.A.btn--red(href="page-call.html") Написать свой вопрос
+        +b.A.btn--red.--selection(href="#", data-form="question") Написать свой вопрос
     // Step 5
     +b.step--total
       +e.H3.title Документы для оформления
@@ -83,7 +83,7 @@ include ../abstracts/bemto/bemto.pug
         +e.item Сертификат(-ы) соответствия продукции (добровольные)
         +e.item Сертификат ИСО предприятия (добровольный документ)
         +e.item Отказное письмо, если на продукцию не требуются обязательные сертификаты и декларации
-        +e.btn
-          +b.A.btn(href="page-application.html") Рассчитать стоимость документов
-          +e.description (услуга предоставляется бесплатно)
+      +e.btn
+        +b.A.btn--selection.--narrow(href="#", data-form="application") Рассчитать стоимость документов
+        +e.description (услуга предоставляется бесплатно)
 

@@ -6,8 +6,8 @@
     margin: 20px 0;
     text-transform: uppercase;
     color: $blue;
+    font-family: $font-family-bold;
     font-size: $font-size-title;
-    font-weight: $bold;
     position: relative;
     @include mq($from:xs, $until:md) {
       font-size: $font-size-subtitle;
@@ -20,7 +20,6 @@
       left: 0;
       right: 0;
       top: 50%;
-      transform: translateY(-50%);
       z-index: 1;
     }
     span{

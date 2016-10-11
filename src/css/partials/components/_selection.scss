@@ -7,7 +7,7 @@
     text-transform: uppercase;
     color: $blue;
     font-size: $font-size-title;
-    font-weight: $bold;
+    font-family: $font-family-bold;
     position: relative;
     @include mq($from:xs, $until:md) {
       font-size: $font-size-subtitle;
@@ -21,7 +21,6 @@
       right: 0;
       top: 50%;
       z-index: 1;
-      transform: translateY(-50%);
     }
     span{
       padding: 0 50px;
@@ -44,7 +43,8 @@
     align-items: stretch;
   }
   &__steps-wrapper{
-    flex: 0 0 72%;
+    flex: 0 0 78%;
+    max-width: 78%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -73,10 +73,11 @@
   max-width: calc(25% - 20px);
   margin: 0 10px;
   background-color: $body-bg;
-  border: 2px solid $blue;
+  border: 3px solid $blue;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: flex-start;
+  // align-content: space-between;
   @include mq($from:xs, $until:xl) {
     font-size: $font-size-smaller ;
   }
@@ -91,11 +92,12 @@
     padding: 0 10px;
     text-transform: uppercase;
     color: $blue;
-    font-size: $font-size-bigger;
+    font-family: $font-family-narrow-bold;
+    font-size: $font-size-big;
   }
   &__nothing{
-    // display: none;
-    display: block;
+    display: none;
+    // display: block;
     width: 100%;
     flex: 0 0 100%;
     min-height: 300px;
@@ -120,8 +122,8 @@
     }
   }
   &__list{
-    // display: block;
-    display: none;
+    display: block;
+    // display: none;
     flex: 0 0 100%;
     text-align: left;
     padding-left: 0;
@@ -130,24 +132,30 @@
     height: 300px;
     overflow-y: auto;
     &--total{
-      height: auto;
+      height: 300px;
       overflow-y: initial;
-      display: none;      
+      // display: none;      
     }
   }
   &__item{
     margin-left: 20px;
     margin-right: 5px;
     padding-left: 5px;
+    &:before{
+      content: none;
+    }
 
     &:hover, &:focus, &:active{
       cursor: pointer;
-      color: $text-color-white;
-      background-color: $blue;
+      color: $red;
+      text-decoration: underline;
     }
     &--active{
-      color: $text-color-white;
-      background-color: $blue;      
+      color: $red;
+      text-decoration: underline;  
+      &:before{
+        content: '';
+      } 
     }
   }
   &--01{
@@ -156,8 +164,8 @@
     }    
   }
   &--total{
-    flex: 0 0 calc(28% - 20px);
-    max-width: calc(28% - 20px);
+    flex: 0 0 calc(22% - 20px);
+    max-width: calc(22% - 20px);
     @include mq($from:xs, $until:lg){
       flex: 0 0 calc(100% - 60px);
       max-width: calc(100% - 60px);
@@ -176,7 +184,7 @@
       }      
     }
     .step__nothing{
-      min-height: 400px;
+      min-height: 250px;
       @include mq($from:xs, $until:lg){
         min-height: 100px;
       }
@@ -198,4 +206,25 @@
     color: $blue;
     margin: 10px 0 15px;
   }
+}
+
+.jspArrow{
+  position: relative;
+  &:after{
+    content: '';
+    @include sprite($s-selection-arrow);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  } 
+}
+.jspArrowUp{
+  &:after{
+    transform: translate(-50%, -50%);
+  }  
+}
+.jspArrowDown{
+  &:after{
+    transform: translate(-50%, -50%) rotate(180deg);
+  }  
 }

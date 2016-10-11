@@ -1,7 +1,7 @@
 .footer{
   background-color: $blue;
   &__inner{
-    padding: 15px 0 5px;
+    padding: 15px 50px 5px;
     display: flex;
     justify-content: space-between;
     @include mq($from:xs, $until:lg){
@@ -27,6 +27,7 @@
     max-width: 230px;
   }
   .menu{
+    padding-left: 50px;
     flex: 0 0 25%;
     max-width: 25%;
     @include mq($from:xs, $until:md){

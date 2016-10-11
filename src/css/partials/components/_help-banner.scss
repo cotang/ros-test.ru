@@ -4,7 +4,7 @@
   margin: 20px 0;
   padding: 10px 20px;
   background-color: $body-bg;
-  border: 2px solid $blue;
+  border: 3px solid $blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@
   &__text{
     text-transform: uppercase;
     font-size: $font-size-bigger;
-    font-weight: $semibold;
+    font-family: $font-family-bold;
     @include mq($from:xs, $until:sm) {
       margin-bottom: 10px;
     }

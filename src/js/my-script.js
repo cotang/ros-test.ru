@@ -1,9 +1,17 @@
-window.$ = window.jQuery =  require('jquery');
-window.slick =              require('./vendor/bower/slick');
-window.slick =              require('./vendor/bower/jquery.knob');
-window.slick =              require('./vendor/bower/jquery.onscreen.min');
+// window.$ = window.jQuery =  require('jquery');
+// window.slick =              require('./vendor/bower/slick');
+// window.knob =               require('./vendor/bower/jquery.knob');
+// window.onscreen =           require('./vendor/bower/jquery.onscreen.min');
+// window.mousewheel =         require('./vendor/bower/jquery.mousewheel.min');
+// window.mwheelintent =       require('./vendor/bower/jquery.mwheelintent');
+// window.jscrollpane =        require('./vendor/bower/jquery.jscrollpane');
+
+
 
 jQuery(document).ready(function($){  
+
+  /* Scroll customization */
+  $('.step__list').jScrollPane({showArrows: true, alwaysShowScroll: true});
 
   /* Hamburger */
   $('.hamburger').click(function(e){
@@ -52,16 +60,6 @@ jQuery(document).ready(function($){
     $(this).closest('.promo').find($('.promo__text')).hide();   
     $(idText).show(); 
   }); 
-
-  /* одинаковая высота у promo__text */
-  var promoTextMaxHeight = 0;
-  var promoTextItem = $(".promo__text");
-  $(promoTextItem).each(function(){
-   if ( $(this).height() > promoTextMaxHeight) {
-    promoTextMaxHeight = $(this).height();
-   }
-  });
-  $(promoTextItem).height(promoTextMaxHeight);
 
 
   /* reasons - bars + circlechart */
@@ -132,17 +130,20 @@ jQuery(document).ready(function($){
   }
 
   /* Selection process */
-  $('.step__item').on('click', function() { 
+  $('.step:not(.step--total) .step__item').on('click', function() { 
     $(this).siblings().removeClass('step__item--active');
     $(this).addClass('step__item--active');
-    $(this).closest('.step').next('.step')
-      .find('.step__nothing').hide()
-      .siblings('.step__list').show();
+    /* скрываем все списки всех шагов */
+    $(this).closest('.step').nextAll('.step').find('.step__list').hide().siblings('.step__nothing').show();
+    $(this).closest('.selection__table').find('.step--total').find('.step__list').hide().siblings('.step__nothing').show();
+    /* открываем список следующего шага */
+    $(this).closest('.step').next('.step').find('.step__nothing').hide().siblings('.step__list').show().jScrollPane({showArrows: true, alwaysShowScroll: true});
+    $(this).closest('.step').next('.step').find('.step__item--active').removeClass('step__item--active');
 
     if ($(this).closest('.step').hasClass('step--04')) {
       $(this).closest('.selection__table').find('.step--total')
         .find('.step__nothing').hide()
-        .siblings('.step__list--total').show();
+        .siblings('.step__list--total').show().jScrollPane({showArrows: true, alwaysShowScroll: true});
     }
   }); 
 
@@ -158,8 +159,45 @@ jQuery(document).ready(function($){
   }); 
 
 
+  /* Form in the modal window */
+  $('.btn[data-form]').click( function(e){
+    e.preventDefault(); 
+    var suffix = $(this).data("form"); 
+    var modal = $('.modal');
+    $('body').css({"overflow":"hidden"});   
+    $(modal).show();
+    var formClass = '.form--' + suffix;
+    $(modal).find(formClass).fadeIn();    
+  });
+  /* Close the modal window */
+  $('.modal__overlay').click( function(){ 
+    $('body').css({"overflow":"auto"});
+    $(this).closest('.modal').find(".form").fadeOut();
+    $(this).closest('.modal').fadeOut(400);
+  }); 
 
+
+
+
+  /* Запись типа и списка документов в блоке Selection в всплывающую форму */
+  $('.selection .step--total .btn').click(function(){    
+    var productType = $(this).closest('.selection__table').find('.step--03 .step__item--active').text();   
+    $('.modal .form--application .form__input[name="Тип продукции"]').val('Тип продукции: ' + productType);
+
+    var docItem = $(this).closest('.step--total').find('.step__item');
+    docItem.clone().text();
+    var docText = docItem.text();
+    console.log(docItem);
+    $('.modal .form--application .form__textarea').text(docText);
+    /* Не доделано!!! */
+  });
+
+
+
+
+    
   
 });
 
 
+    

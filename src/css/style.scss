@@ -23,7 +23,7 @@
 @import "partials/components/form";
 @import "partials/components/form-states";
 @import "partials/components/btn";
-@import "partials/components/overlay";
+@import "partials/components/modal";
 @import "partials/components/help-banner";
 @import "partials/components/pagination";
 
@@ -51,3 +51,6 @@
 @import "partials/components/review";
 @import "partials/components/question";
 @import "partials/components/news";
+
+
+@import "vendor/jquery.jscrollpane";
