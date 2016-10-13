@@ -727,7 +727,7 @@
                 <li class="step__item">Отказное письмо, если на продукцию не требуются обязательные сертификаты и декларации</li>
               </ul>
               <div class="step__btn">
-                <a class="btn btn--selection btn--narrow" href="#" data-form="application">Рассчитать стоимость документов</a>
+                <a class="btn btn--selection btn--narrow" href="#" data-form="application-advanced">Рассчитать стоимость документов</a>
                 <div class="step__description">(услуга предоставляется бесплатно)</div>
               </div>
             </div>
@@ -791,21 +791,21 @@
                 <span>Бесплатные консультации</span>
               </div>
               <div class="offers__icon"></div>
-              <a class="btn" href="#" data-form="application">Спросить он-лайн </a>
+              <a class="btn" href="#" data-form="question">Спросить он-лайн </a>
             </li>
             <li class="offers__item" itemprop="offers">
               <div class="offers__text">
                 <span>Штрихкод на продукцию</span>
               </div>
               <div class="offers__icon"></div>
-              <a class="btn" href="#" data-form="application">Заказать штрихкод</a>
+              <a class="btn" href="#" data-form="application" data-type="Штрихкод на продукцию">Заказать штрихкод</a>
             </li>
             <li class="offers__item" itemprop="offers">
               <div class="offers__text">
                 <span>Сертификат ISO</span>
               </div>
               <div class="offers__icon"></div>
-              <a class="btn" href="#" data-form="application">Заказать ISO</a>
+              <a class="btn" href="#" data-form="application" data-type="Сертификат ISO">Заказать ISO</a>
             </li>
           </ul>
         </section>
@@ -1001,6 +1001,7 @@
     <div class="modal">
       <div class="modal__overlay"></div>
       <div class="modal__form">
+        <a class="modal__close" href="#"></a>
         <!-- Form application-->
         <section class="form form--application">
           <form class="form__form" action="" method="" id="formApplication">
@@ -1009,13 +1010,31 @@
               <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
               <p class="help-block">Ошибка заполнения поля формы</p>
             </div>
-            <div class="form-group field-email required">
-              <input class="form__input" type="email" name="Email" placeholder="Ваш e-mail*" />
+            <div class="form-group field-email-tel required">
+              <input class="form__input" type="text" name="Email/телефон" placeholder="E-mail или телефон*" />
               <p class="help-block">Ошибка заполнения поля формы</p>
             </div>
-            <div class="form-group field-phone">
-              <input class="form__input" type="tel" name="Телефон" placeholder="Контактный телефон" />
-              <p class="help-block">Ошибка заполнения поля формы </p>
+            <div class="form-group field-production required">
+              <input class="form__input" type="text" name="Необходимый документ" placeholder="Необходимый документ*" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group">
+              <button class="btn btn--form" type="submit">Заказать документ</button>
+              <p class="help-block help-block-success">Ваша заявка отправлена</p>
+            </div>
+          </form>
+        </section>
+        <!-- Form application-advanced-->
+        <section class="form form--application-advanced">
+          <form class="form__form" action="" method="" id="formApplicationAdvanced">
+            <h3 class="form__title">Заказать документ</h3>
+            <div class="form-group field-name required">
+              <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group field-email-tel required">
+              <input class="form__input" type="text" name="Email/телефон" placeholder="E-mail или телефон*" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
             </div>
             <div class="form-group field-production required">
               <input class="form__input" type="text" name="Тип продукции" placeholder="Тип продукции*" />

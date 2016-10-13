@@ -630,20 +630,12 @@
                   <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
-                <div class="form-group field-email required">
-                  <input class="form__input" type="email" name="Email" placeholder="Ваш e-mail*" />
+                <div class="form-group field-email-tel required">
+                  <input class="form__input" type="text" name="Email/телефон" placeholder="E-mail или телефон*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
-                </div>
-                <div class="form-group field-phone">
-                  <input class="form__input" type="tel" name="Телефон" placeholder="Контактный телефон" />
-                  <p class="help-block">Ошибка заполнения поля формы </p>
                 </div>
                 <div class="form-group field-production required">
-                  <input class="form__input" type="text" name="Тип продукции" placeholder="Тип продукции*" />
-                  <p class="help-block">Ошибка заполнения поля формы</p>
-                </div>
-                <div class="form-group field-doclist required">
-                  <textarea class="form__textarea" type="text" name="Список документов" placeholder="Список документов*"></textarea>
+                  <input class="form__input" type="text" name="Необходимый документ" placeholder="Необходимый документ*" />
                   <p class="help-block">Ошибка заполнения поля формы</p>
                 </div>
                 <div class="form-group">
@@ -1119,6 +1111,7 @@
     <div class="modal">
       <div class="modal__overlay"></div>
       <div class="modal__form">
+        <a class="modal__close" href="#"></a>
         <!-- Form application-->
         <section class="form form--application">
           <form class="form__form" action="" method="" id="formApplication">
@@ -1127,13 +1120,31 @@
               <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
               <p class="help-block">Ошибка заполнения поля формы</p>
             </div>
-            <div class="form-group field-email required">
-              <input class="form__input" type="email" name="Email" placeholder="Ваш e-mail*" />
+            <div class="form-group field-email-tel required">
+              <input class="form__input" type="text" name="Email/телефон" placeholder="E-mail или телефон*" />
               <p class="help-block">Ошибка заполнения поля формы</p>
             </div>
-            <div class="form-group field-phone">
-              <input class="form__input" type="tel" name="Телефон" placeholder="Контактный телефон" />
-              <p class="help-block">Ошибка заполнения поля формы </p>
+            <div class="form-group field-production required">
+              <input class="form__input" type="text" name="Необходимый документ" placeholder="Необходимый документ*" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group">
+              <button class="btn btn--form" type="submit">Заказать документ</button>
+              <p class="help-block help-block-success">Ваша заявка отправлена</p>
+            </div>
+          </form>
+        </section>
+        <!-- Form application-advanced-->
+        <section class="form form--application-advanced">
+          <form class="form__form" action="" method="" id="formApplicationAdvanced">
+            <h3 class="form__title">Заказать документ</h3>
+            <div class="form-group field-name required">
+              <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group field-email-tel required">
+              <input class="form__input" type="text" name="Email/телефон" placeholder="E-mail или телефон*" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
             </div>
             <div class="form-group field-production required">
               <input class="form__input" type="text" name="Тип продукции" placeholder="Тип продукции*" />
