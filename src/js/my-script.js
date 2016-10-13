@@ -176,6 +176,7 @@ jQuery(document).ready(function($){
   $('.modal__overlay, .modal__close').click( function(e){ 
     e.preventDefault();
     $('body').css({"overflow":"auto"});
+    // $(this).closest('.modal').find('input, textarea').val('');
     $(this).closest('.modal').find(".form").fadeOut();
     $(this).closest('.modal').fadeOut(400);
   }); 
