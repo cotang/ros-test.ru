@@ -163,39 +163,36 @@ jQuery(document).ready(function($){
   $('.btn[data-form]').click( function(e){
     e.preventDefault(); 
     var suffix = $(this).data("form"); 
-    var modal = $('.modal');
     $('body').css({"overflow":"hidden"});   
-    $(modal).show();
+    $('.modal').show();
     var formClass = '.form--' + suffix;
-    $(modal).find(formClass).fadeIn();    
+    $('.modal').find(formClass).fadeIn();
+    var dataType = $(this).data("type"); 
+    if (dataType){
+      $('.modal .form--application').find('.form__input[name="Необходимый документ"]').val(dataType);
+    }
   });
   /* Close the modal window */
-  $('.modal__overlay').click( function(){ 
+  $('.modal__overlay, .modal__close').click( function(e){ 
+    e.preventDefault();
     $('body').css({"overflow":"auto"});
     $(this).closest('.modal').find(".form").fadeOut();
     $(this).closest('.modal').fadeOut(400);
   }); 
 
-
-
-
-  /* Запись типа и списка документов в блоке Selection в всплывающую форму */
-  $('.selection .step--total .btn').click(function(){    
+  /* Запись типа и списка документов в блоке Selection в всплывающую форму application-advanced */
+  $('.selection .step--total .btn').click(function(){
+    var modalForm = $('.modal .form--application-advanced');
     var productType = $(this).closest('.selection__table').find('.step--03 .step__item--active').text();   
-    $('.modal .form--application .form__input[name="Тип продукции"]').val('Тип продукции: ' + productType);
+    modalForm.find('.form__input[name="Тип продукции"]').val('Тип продукции: ' + productType);
 
-    var docItem = $(this).closest('.step--total').find('.step__item');
-    docItem.clone().text();
-    var docText = docItem.text();
-    console.log(docItem);
-    $('.modal .form--application .form__textarea').text(docText);
-    /* Не доделано!!! */
-  });
-
-
-
-
-    
+    var docItem = $(this).closest('.step--total').find('.step__item');    
+    var textareaContent = '';
+    $(docItem).each(function(indx, element){
+      textareaContent+= $(this).text() + '; ';
+    });
+    modalForm.find('.form__textarea').text(textareaContent);
+  });    
   
 });
 

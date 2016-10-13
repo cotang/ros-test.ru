@@ -1,6 +1,6 @@
 - var application = [{name: 'application', id: 'formApplication', title : 'Заказать документ', application: true, button: 'Заказать документ', success: 'Ваша заявка отправлена'}] 
-- var question = [{name: 'question', id: 'formQuestion', title : 'Задать вопрос', question: true,  button: 'Спросить', success: 'Ваш вопрос отправлен'}] 
-- var call = [{name: 'call', id: 'formCall', title : 'Заказать звонок', call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}] 
+- var applicationAdvanced = [{name: 'application-advanced', id: 'formApplicationAdvanced', title : 'Заказать документ', applicationAdvanced: true, button: 'Заказать документ', success: 'Ваша заявка отправлена'}] 
+- var question = [{name: 'question', id: 'formQuestion', title : 'Задать вопрос', question: true,  button: 'Спросить', success: 'Ваш вопрос отправлен'}]
 - var review = [{name: 'review', id: 'formReview', title : 'Оставить отзыв', review: true, button: 'Оставить отзыв', success: 'Отзыв успешно оставлен'}] 
 
 
@@ -15,12 +15,20 @@ mixin form(items)
           .form-group.field-name.required
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block Ошибка заполнения поля формы
-          .form-group.field-email.required
-            +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
+          .form-group.field-email-tel.required
+            +e.INPUT.input(type='text', name='Email/телефон', placeholder='E-mail или телефон*')
             p.help-block Ошибка заполнения поля формы
-          .form-group.field-phone
-            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон')
-            p.help-block Ошибка заполнения поля формы 
+          .form-group.field-production.required
+            +e.INPUT.input(type='text', name='Необходимый документ', placeholder='Необходимый документ*') 
+            p.help-block Ошибка заполнения поля формы
+
+        if item.applicationAdvanced
+          .form-group.field-name.required
+            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-email-tel.required
+            +e.INPUT.input(type='text', name='Email/телефон', placeholder='E-mail или телефон*')
+            p.help-block Ошибка заполнения поля формы
           .form-group.field-production.required
             +e.INPUT.input(type='text', name='Тип продукции', placeholder='Тип продукции*') 
             p.help-block Ошибка заполнения поля формы
@@ -37,14 +45,6 @@ mixin form(items)
             p.help-block Ошибка заполнения поля формы
           .form-group.field-question.required
             +e.TEXTAREA.textarea(type='text', name='Ваш вопрос', placeholder='Ваш вопрос*')
-            p.help-block Ошибка заполнения поля формы
-
-        if item.call
-          .form-group.field-name.required.has-error
-            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
-            p.help-block Ошибка заполнения поля формы
-          .form-group.field-phone.required.has-success
-            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
             p.help-block Ошибка заполнения поля формы
 
         if item.review
