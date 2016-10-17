@@ -7,6 +7,7 @@
     text-transform: uppercase;
     color: $blue;
     font-family: $font-family-bold;
+    font-weight: normal;
     font-size: $font-size-title;
     position: relative;
     @include mq($from:xs, $until:md) {

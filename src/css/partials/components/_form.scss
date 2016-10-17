@@ -6,7 +6,9 @@
   &__form{
     display: flex;
     flex-wrap: wrap; 
-    justify-content: center;   
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;   
   }
   &__title{
     text-align: center;
@@ -18,6 +20,7 @@
     font-size: $font-size-subtitle;
     color: $white;
     font-family: $font-family-bold;
+    font-weight: normal;
   }
   &__input{
     padding: 8px 10px; 
@@ -78,8 +81,8 @@
 
 .form-group{
   flex: 0 0 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   margin-bottom: 20px;
 }
 

@@ -8,6 +8,7 @@
     color: $blue;
     font-size: $font-size-title;
     font-family: $font-family-bold;
+    font-weight: normal;    
     position: relative;
     @include mq($from:xs, $until:md) {
       font-size: $font-size-subtitle;
@@ -109,6 +110,7 @@
       font-weight: $semibold;
       text-transform: uppercase;
       font-family: $font-family-bold;
+      font-weight: normal;
       font-size: $font-size-big;
       display: inline-block; 
       max-width: 160px; 

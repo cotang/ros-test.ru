@@ -12,6 +12,7 @@
     color: $blue;
     font-size: $font-size-title;
     font-family: $font-family-bold;
+    font-weight: normal;
     position: relative;
     @include mq($from:xs, $until:md) {
       font-size: $font-size-subtitle;
@@ -55,6 +56,7 @@
     border-bottom: 1px solid $grey-border; 
     font-size: $font-size-bigger;
     font-family: $font-family-bold;  
+    font-weight: normal;
     a{
       color: $crimson;
       text-decoration: underline;
@@ -119,6 +121,7 @@
     color: $blue;
     font-size: $font-size-bigger; 
     font-family: $font-family-bold;
+    font-weight: normal;
   }
 }
 
@@ -162,6 +165,7 @@
     text-transform: uppercase;
     margin: 10px 0;
     font-family: $font-family-bold;
+    font-weight: normal;
   }
   &__link{
     display: block;
@@ -229,7 +233,8 @@
     border-bottom: 1px solid $grey-border;
     color: $blue;
     font-size: $font-size-bigger;
-    font-family: $font-family-bold; 
+    font-family: $font-family-bold;
+    font-weight: normal; 
   }
   &__link-all{
     position: absolute;
