@@ -1542,8 +1542,7 @@ li {
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
     max-width: 25%;
-    margin-left: 0;
-    padding-left: 0; }
+    margin-left: 0; }
 
 .after-footer {
   background-color: #427ac1; }
@@ -2533,7 +2532,8 @@ li {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
-    margin-top: 20px; }
+    margin-top: 20px;
+    border-left: none; }
   .about-us__title{
     font-size: 24px; }
   .about-us__title span{
