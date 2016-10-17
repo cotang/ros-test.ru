@@ -70,6 +70,9 @@
     &:before{
       content: none;
     }
+    &--production{
+      position: static;      
+    }
   }
   &__link{
     color: $white;
@@ -151,6 +154,12 @@
     }
   } 
   &--production{
+    top: 100%;
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+    columns: 4;
+    max-height: initial;
     .menu-submenu__item{
       display: flex;
     } 

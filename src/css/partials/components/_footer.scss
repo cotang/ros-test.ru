@@ -34,6 +34,7 @@
       flex: 0 0 50%;
       max-width: 50%;
       text-align: center;
+      padding-left: 0;
     }
   }
   .menu__list{
@@ -44,6 +45,8 @@
   .city{
     flex: 0 0 25%;
     max-width: 25%;
+    margin-left: 0;
+    padding-left: 0;
     @include mq($from:xs, $until:md){
       flex: 0 0 100%;
       max-width: 100%;

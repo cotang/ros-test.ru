@@ -53,7 +53,8 @@
     text-transform: uppercase; 
     padding-bottom: 10px;
     border-bottom: 1px solid $grey-border; 
-    font-size: $font-size-bigger;  
+    font-size: $font-size-bigger;
+    font-family: $font-family-bold;  
     a{
       color: $crimson;
       text-decoration: underline;
@@ -117,9 +118,10 @@
     border-bottom: 1px solid $grey-border;
     color: $blue;
     font-size: $font-size-bigger; 
+    font-family: $font-family-bold;
   }
-
 }
+
 .manager{
   display: flex;
   flex-wrap: wrap;
@@ -127,11 +129,17 @@
     justify-content: center;
   }
   &__img-wrapper{
-    flex: 0 0 150px;    
+    flex: 0 0 150px;
+    @include mq($from:xs, $until:sm){
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }    
   }
   &__img{
     width: 150px;
     height: 150px;
+
     img{
       height: 100%;
       width: 100%;
@@ -142,6 +150,10 @@
   &__info{
     margin-left: 20px;
     flex: 0 0 calc(100% - 170px);
+    @include mq($from:xs, $until:sm){
+      flex: 0 0 100%;
+      max-width: 100%;
+    } 
   } 
   &__position{
     margin: 0;
@@ -149,6 +161,7 @@
   &__name{
     text-transform: uppercase;
     margin: 10px 0;
+    font-family: $font-family-bold;
   }
   &__link{
     display: block;
@@ -184,12 +197,13 @@
       text-decoration: underline;
     } 
   }
-  .btn{
+  &__btn{
+    flex: 0 0 100%;
     max-width: 100%;
-    font-size: $font-size-smaller;
-    padding: 5px;
-    display: block;
-    margin-top: 10px;
+    margin: 20px 0;
+    .btn{
+      display: block;
+    }    
   }
 }
 
@@ -214,7 +228,8 @@
     padding-bottom: 10px;
     border-bottom: 1px solid $grey-border;
     color: $blue;
-    font-size: $font-size-bigger; 
+    font-size: $font-size-bigger;
+    font-family: $font-family-bold; 
   }
   &__link-all{
     position: absolute;

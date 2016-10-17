@@ -29,14 +29,6 @@
       border: 4px solid $crimson-border;
     }    
   }
-  &--selection{
-    font-family: $font-family-bold;
-    font-size: $font-size-bigger;
-  }
-  &--narrow{
-    font-family: $font-family-narrow-bold;
-  }
-
   &--form{
     background-color: $red;
     &:hover, &:focus, &:active{
@@ -45,5 +37,17 @@
     &:active{
       border: 4px solid $crimson-border;
     }    
+  }
+
+  &--selection{
+    font-family: $font-family-bold;
+    font-size: $font-size-bigger;
+  }
+  &--narrow{
+    font-family: $font-family-narrow-bold;
+  }
+  &--big{
+    text-align: center;
+    padding: 12px 25px;
   }
 }

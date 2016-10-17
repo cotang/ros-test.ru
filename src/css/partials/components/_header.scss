@@ -5,10 +5,11 @@
     padding: 15px 50px 5px;
     display: flex;
     justify-content: space-between;
-    @include mq($from:xs, $until:lg){
+    position: relative;
+    @include mq($from:xs, $until:xl){
+      padding: 10px 0;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 10px 0;
     }
   }
 }
@@ -46,6 +47,8 @@
   @include mq($from:xs, $until:sm){
     flex: 0 0 100%;
     text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
   }
   &__link{
     display: block;
@@ -65,6 +68,8 @@
       }      
     } 
     &--tel{
+      font-size: 1.1em;
+      font-family: $font-family-bold;
       &:before{
         @include sprite($s-icon-mob); 
       }      

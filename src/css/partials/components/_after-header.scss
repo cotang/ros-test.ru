@@ -20,7 +20,9 @@
     position: relative;
     @include mq($from:xs, $until:lg){
       flex: 0 0 100%;
-      max-width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding-bottom: 50px;
       padding-right: 0;
     }    
     .form{
@@ -79,6 +81,9 @@
     right: 0;
     bottom: 0;
     margin-right: 30px;
+    @include mq($from:xs, $until:lg){
+      margin-right: 0;
+    } 
   }
 }
 
@@ -129,7 +134,7 @@
     background-color: rgba(0,0,0,.7);
     color: $white;
     padding: 10px;
-    min-height: 90px;
+    min-height: 115px;
     &:hover,  &:focus {
       color: $white;
     }
@@ -152,5 +157,6 @@
     margin-top: 0;
     margin-bottom: 10px;
     color: $blue;
+    font-family: $font-family-bold;
   }
 }

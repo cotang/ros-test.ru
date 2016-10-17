@@ -23,14 +23,15 @@ include ../abstracts/bemto/bemto.pug
     +b.manager
       +e.img-wrapper
         +e.img
-          img(src="img/managers/spec.jpg" alt="Елена" title="Елена")
-        +b.A.btn--red(href="#", data-form="question") Спросить он-лайн
+          img(src="img/managers/spec.jpg" alt="Елена" title="Елена")        
       +e.info
         +e.P.position Специалист по сертификации
         +e.H3.name Елена Капралова
         +e.A.link--icq(href= "http://www.icq.com/whitepages/cmd.php?uin=444223004&action=message", target="_blank") 444-223-004
         +e.A.link--skype(href= "skype:skypecall", target="_blank") skype: skypecall
         +e.A.link--mail(href="mailto:info@ros-test.ru", target="_blank") info@ros-test.ru
+      +e.btn
+        +b.A.btn--red.--big(href="#", data-form="call") Перезвоните мне
   // Contacts section
   +b.SECTION.contacts-section
     +e.title-wrapper
@@ -102,3 +103,4 @@ include ../abstracts/bemto/bemto.pug
     include _form--application.pug
     include _form--application-advanced.pug
     include _form--question.pug
+    include _form--call.pug

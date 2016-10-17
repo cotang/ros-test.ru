@@ -36,7 +36,7 @@ include ../abstracts/bemto/bemto.pug
             +e.link(href="index.html") Главная
           +e.item 
             +e.link(href="page-news.html") Новости
-          +e.item
+          +e.item--services
             +e.link--closed(href="#") Услуги
             +b.UL.menu-submenu--services
               +e.item
@@ -130,7 +130,7 @@ include ../abstracts/bemto/bemto.pug
                     +e.link(href="page.html") Разработка и регистрация технических условий (ТУ)
                   +e.item 
                     +e.link(href="page.html") Технический регламент в России
-          +e.item
+          +e.item--production
             +e.link--closed(href="#") Продукция
             +b.UL.menu-submenu--production
               +e.item
@@ -301,7 +301,7 @@ include ../abstracts/bemto/bemto.pug
                     +e.link(href="page.html") Фильтры для очистки воды
                   +e.item 
                     +e.link(href="page.html") Фитинги
-          +e.item
+          +e.item--reglaments
             +e.link--closed(href="#") Тех.регламенты 
             +b.UL.menu-submenu--reglaments
               +e.item
@@ -330,20 +330,20 @@ include ../abstracts/bemto/bemto.pug
     +b.promo
       +e.UL.list
         +e.item--01
-          img(src= "img/promo/slide1.jpg" alt="slide1" title="slide1")
-          +e.A.link(href="page.html") Сертификация и декларирование ТР ТС
+          img(src= "img/promo/slide5.jpg" alt="slide5" title="slide5")
+          +e.A.link(href="page.html") Разработка и регистрация технических условий (ТУ)
         +e.item--02
-          img(src= "img/promo/slide2.jpg" alt="slide2" title="slide2")
-          +e.A.link(href="page.html") Сертификация ГОСТ Р
+          img(src= "img/promo/slide4.jpg" alt="slide4" title="slide4")
+          +e.A.link(href="page.html") Сертификат Пожарной сертификации 
         +e.item--03
           img(src= "img/promo/slide3.jpg" alt="slide3" title="slide3")
-          +e.A.link(href="page.html") Свидетельства о гос.регистрации продукции
+          +e.A.link(href="page.html") Свидетельство о Гос.регистрации
         +e.item--04
-          img(src= "img/promo/slide4.jpg" alt="slide4" title="slide4")
-          +e.A.link(href="page.html") Пожарная сертификация
+          img(src= "img/promo/slide1.jpg" alt="slide1" title="slide1")
+          +e.A.link(href="page.html") Сертификат соответствия Техническому Регламенту (ТР)
         +e.item--05
-          img(src= "img/promo/slide5.jpg" alt="slide5" title="slide5")
-          +e.A.link(href="page.html") Технические условия
+          img(src= "img/promo/slide2.jpg" alt="slide2" title="slide2")
+          +e.A.link(href="page.html") Сертификат соответствия ГОСТ Р
       +e.description
         +e.text--01
           +e.H3.title Lorem ipsum dolor sit amet1

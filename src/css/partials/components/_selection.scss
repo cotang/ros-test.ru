@@ -51,11 +51,8 @@
     @include mq($from:xs, $until:lg){
       flex: 0 0 100%;
       max-width: 100%;
-      padding: 0 20px;
-    }
-    @include mq($from:xs, $until:md) {
       padding: 0;
-    } 
+    }
   }
   .help-banner{
     flex: 0 0 calc(100% - 20px);
@@ -131,10 +128,14 @@
     margin: 0;
     height: 300px;
     overflow-y: auto;
+    word-wrap: break-word;
     &--total{
       height: 300px;
       overflow-y: initial;
-      // display: none;      
+      // display: none;
+      @include mq($from:xs, $until:lg){
+        height: auto;
+      }      
     }
   }
   &__item{
@@ -167,9 +168,9 @@
     flex: 0 0 calc(22% - 20px);
     max-width: calc(22% - 20px);
     @include mq($from:xs, $until:lg){
-      flex: 0 0 calc(100% - 60px);
-      max-width: calc(100% - 60px);
-      margin: 20px 30px;
+      flex: 0 0 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+      margin: 20px 10px;
     }
     .step__title{
       color: $red;
@@ -195,6 +196,10 @@
     &:before{
       content: none;
     } 
+    @include mq($from:xs, $until:lg){
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
   .btn{
     white-space: normal;
