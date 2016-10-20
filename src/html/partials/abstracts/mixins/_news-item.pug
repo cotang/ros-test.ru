@@ -1,9 +1,9 @@
 mixin newsItem(title, img, alt, text)
-  +b.ARTICLE.news
+  +b.ARTICLE.news(itemscope, itemtype="http://schema.org/Article")
     +e.H2.subtitle
-      a(href="single-news.html") #{title}   
-    +e.text
+      a(href="single-news.html", itemprop="headline") #{title}   
+    +e.text(itemprop="articleBody")
       +e.img
-        img(src= "img/" + img alt= alt title= alt)
+        img(src= "img/" + img alt= alt title= alt itemprop="image")
       | !{text}
 

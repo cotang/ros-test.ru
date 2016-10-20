@@ -5,53 +5,54 @@ include ../abstracts/bemto/bemto.pug
   +e.H2.title 
     span Контактная информация
   // Reviews section
-  +b.SECTION.reviews-section
+  +b.SECTION.reviews-section(itemscope, itemtype="http://schema.org/Review")
     +e.H3.title 
       a(href="page-reviews.html") Отзывы наших клиентов
     +e.UL.list
-      +e.item
+      +e.item(itemprop="reviewBody")
         +e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad... minim veniam, quis nostrud exercitation.
-        +e.link(href="single-reviews.html") Смотреть полностью
-        +e.date 06.07.15
-      +e.item 
+        +e.link(href="single-reviews.html", itemprop="url") Смотреть полностью
+        +e.date(itemprop="datePublished") 06.07.15
+      +e.item(itemprop="reviewBody")
         +e.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad... minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        +e.link(href="single-reviews.html") Смотреть полностью
-        +e.date 06.07.15
+        +e.link(href="single-reviews.html", itemprop="url") Смотреть полностью
+        +e.date(itemprop="datePublished") 06.07.15
   // Specialists
   +b.SECTION.specialists
     +e.H3.title Ваш специалист
-    +b.manager
+    +b.manager(itemscope, itemtype="http://schema.org/Person")
       +e.img-wrapper
         +e.img
-          img(src="img/managers/spec.jpg" alt="Елена" title="Елена")        
+          img(src="img/managers/spec.jpg" alt="Елена" title="Елена", itemprop="image")        
       +e.info
-        +e.P.position Специалист по сертификации
-        +e.H3.name Елена Капралова
+        +e.P.position(itemprop="jobTitle") Специалист по сертификации
+        +e.H3.name(itemprop="name") Елена Капралова
         +e.A.link--icq(href= "http://www.icq.com/whitepages/cmd.php?uin=444223004&action=message", target="_blank") 444-223-004
         +e.A.link--skype(href= "skype:skypecall", target="_blank") skype: skypecall
         +e.A.link--mail(href="mailto:info@ros-test.ru", target="_blank") info@ros-test.ru
       +e.btn
         +b.A.btn--red.--big(href="#", data-form="call") Перезвоните мне
   // Contacts section
-  +b.SECTION.contacts-section
+  +b.SECTION.contacts-section(itemscope, itemtype="http://schema.org/Organization")
     +e.title-wrapper
-      +e.H3.title Рос-тест Санкт-Петербург
-      +e.A.link-all(href="page-contacts.html") Смотреть все филиалы
+      +e.H3.title(itemprop="name") Рос-тест Санкт-Петербург
+      +e.A.link-all(href="page-contacts.html", itemprop="url") Смотреть все филиалы
     +e.info
-      +e.address м."Елизаровская"
-      +e.address ул.Бабушкина, д.3, оф.255
-      +e.A.link(href="tel:+78123350511", target="_blank") (812) 335-05-11
-      +e.A.link(href="tel:+78129238223", target="_blank") (812) 923-82-23
+      +e.address(itemprop="address")
+        p м."Елизаровская"
+        p ул.Бабушкина, д.3, оф.255
+      +e.A.link(href="tel:+78123350511", target="_blank", itemprop="telephone") (812) 335-05-11
+      +e.A.link(href="tel:+78129238223", target="_blank", itemprop="telephone") (812) 923-82-23
     +e.map
-      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4240.110454070536!2d30.413835351820655!3d59.89785921195567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fcd58f5a521%3A0xb70d4a7dc713bde5!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAzLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkyMDI5!5e0!3m2!1sru!2sru!4v1473687650068")
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4240.110454070536!2d30.413835351820655!3d59.89785921195567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fcd58f5a521%3A0xb70d4a7dc713bde5!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAzLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkyMDI5!5e0!3m2!1sru!2sru!4v1473687650068", itemprop="location", itemscope, itemtype="http://schema.org/Map")
 
 // Footer
 +b.FOOTER.footer
   +e.inner.container
     // Logo
-    +b.logo
+    +b.logo(itemscope, itemtype="http://schema.org/Brand")
       +e.A.img(href="index.html")       
-        img(src="img/logo.png", alt="logo", title="logo")
+        img(src="img/logo.png", alt="logo", title="logo", itemprop="logo")
     // Second menu
     +b.menu--second 
       +e.UL.list

@@ -2,7 +2,7 @@ include ../abstracts/bemto/bemto.pug
 
 
 // Help banner
-+b.help-banner
-  +e.text Вы можете заказать любой сертификат прямо на сайте
++b.help-banner(itemscope, itemtype="http://schema.org/Service")
+  +e.text(itemprop="offers") Вы можете заказать любой сертификат прямо на сайте
   +e.arrow 
   +b.A.btn--red(href="#", data-form="application") Заказать

@@ -1,8 +1,8 @@
 include ../abstracts/bemto/bemto.pug
 
-+b.SECTION.selection
++b.SECTION.selection(itemscope, itemtype="http://schema.org/Service")
   +e.H2.title 
-    span Подбор документов онлайн
+    span(itemprop="offers") Подбор документов онлайн
   +e.table
     +e.steps-wrapper 
       // Step 1
@@ -86,4 +86,3 @@ include ../abstracts/bemto/bemto.pug
       +e.btn
         +b.A.btn--selection.--narrow(href="#", data-form="application-advanced") Рассчитать стоимость документов
         +e.description (услуга предоставляется бесплатно)
-

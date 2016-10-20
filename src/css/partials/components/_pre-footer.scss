@@ -258,6 +258,11 @@
   &__link{
     display: block;
   }
+  &__address{
+    p{
+      margin: 0;
+    }
+  }
   &__map{
     iframe{
       width: 100%;

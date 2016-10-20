@@ -1,11 +1,11 @@
 mixin questionItem(title, askPerson, askDetails, askText)
-  +b.ARTICLE.question
+  +b.ARTICLE.question(itemscope, itemtype="http://schema.org/Article")
     +e.H2.subtitle
-      a(href="single-question.html") #{title}   
-    +e.ask
+      a(href="single-question.html", itemprop="headline") #{title}   
+    +e.ask(itemprop="articleSection", itemscope, itemtype="http://schema.org/Question")
       +e.person
-        +e.name #{askPerson} 
+        +e.name(itemprop="author") #{askPerson} 
         | #{askDetails} 
-      +e.text !{askText}
+      +e.text(itemprop="citation") !{askText}
     +e.A.link(href="single-question.html") Читать ответ
 

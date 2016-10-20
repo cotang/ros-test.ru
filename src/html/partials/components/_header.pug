@@ -4,9 +4,9 @@ include ../abstracts/bemto/bemto.pug
 +b.HEADER.header
   +e.inner.container
     // Logo
-    +b.logo
+    +b.logo(itemscope, itemtype="http://schema.org/Brand")
       +e.A.img(href="index.html")       
-        img(src="img/logo.png", alt="logo", title="logo")
+        img(src="img/logo.png", alt="logo", title="logo", itemprop="logo")
     +b.NAV.nav
       // Hamburger
       +e.hamburger
@@ -310,14 +310,15 @@ include ../abstracts/bemto/bemto.pug
                 +e.link(href="page.html") Тех.регламенты Таможенного союза
     +e.city
       // City
-      +b.city
+      +b.city(itemscope, itemtype="http://schema.org/Organization")
         +e.name-wrapper 
-          +e.link--name(href="page-сontacts.html") Санкт-Петербург
+          +e.link--name(href="page-сontacts.html")
+            span(itemprop="location") Санкт-Петербург
         +e.tel-wrapper 
-          +e.link--tel(href="tel:+78123350511", target="_blank") (812) 335-05-11
-          +e.link--tel(href="tel:+78129238223", target="_blank") (812) 923-82-23
+          +e.link--tel(href="tel:+78123350511", target="_blank", itemprop="telephone") (812) 335-05-11
+          +e.link--tel(href="tel:+78129238223", target="_blank", itemprop="telephone") (812) 923-82-23
         +e.email-wrapper 
-          +e.link--email(href="mailto:info@ros-test.ru", target="_blank") info@ros-test.ru
+          +e.link--email(href="mailto:info@ros-test.ru", target="_blank", itemprop="email") info@ros-test.ru
 
 // After header
 +b.SECTION.after-header
@@ -327,39 +328,44 @@ include ../abstracts/bemto/bemto.pug
       include _form--question.pug
       +e.after-header__clarification Вы получите ответ на свой e-mail в течение 2-х часов
     // Promo 
-    +b.promo
+    +b.promo(itemscope, itemtype="http://schema.org/Product")
       +e.UL.list
         +e.item--01
-          img(src= "img/promo/slide5.jpg" alt="slide5" title="slide5")
-          +e.A.link(href="page.html") Разработка и регистрация технических условий (ТУ)
+          img(src= "img/promo/slide5.jpg" alt="slide5" title="slide5", itemprop="image")
+          +e.A.link(href="page.html", itemprop="url") 
+          span(itemprop="name") Разработка и регистрация технических условий (ТУ)
         +e.item--02
-          img(src= "img/promo/slide4.jpg" alt="slide4" title="slide4")
-          +e.A.link(href="page.html") Сертификат Пожарной сертификации 
+          img(src= "img/promo/slide4.jpg" alt="slide4" title="slide4", itemprop="image")
+          +e.A.link(href="page.html", itemprop="url") 
+            span(itemprop="name") Сертификат Пожарной сертификации 
         +e.item--03
-          img(src= "img/promo/slide3.jpg" alt="slide3" title="slide3")
-          +e.A.link(href="page.html") Свидетельство о Гос.регистрации
+          img(src= "img/promo/slide3.jpg" alt="slide3" title="slide3", itemprop="image")
+          +e.A.link(href="page.html", itemprop="url") 
+            span(itemprop="name") Свидетельство о Гос.регистрации
         +e.item--04
-          img(src= "img/promo/slide1.jpg" alt="slide1" title="slide1")
-          +e.A.link(href="page.html") Сертификат соответствия Техническому Регламенту (ТР)
+          img(src= "img/promo/slide1.jpg" alt="slide1" title="slide1", itemprop="image")
+          +e.A.link(href="page.html", itemprop="url") 
+            span(itemprop="name") Сертификат соответствия Техническому Регламенту (ТР)
         +e.item--05
-          img(src= "img/promo/slide2.jpg" alt="slide2" title="slide2")
-          +e.A.link(href="page.html") Сертификат соответствия ГОСТ Р
+          img(src= "img/promo/slide2.jpg" alt="slide2" title="slide2", itemprop="image")
+          +e.A.link(href="page.html", itemprop="url") 
+            span(itemprop="name") Сертификат соответствия ГОСТ Р
       +e.description
         +e.text--01
-          +e.H3.title Lorem ipsum dolor sit amet1
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          +e.H3.title(itemprop="name") Lorem ipsum dolor sit amet1
+          p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         +e.text--02
-          +e.H3.title Lorem ipsum dolor sit amet2
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          +e.H3.title(itemprop="name") Lorem ipsum dolor sit amet2
+          p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
         +e.text--03
-          +e.H3.title Lorem ipsum dolor sit amet3
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          +e.H3.title(itemprop="name") Lorem ipsum dolor sit amet3
+          p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         +e.text--04
-          +e.H3.title Lorem ipsum dolor sit amet4
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          +e.H3.title(itemprop="name") Lorem ipsum dolor sit amet4
+          p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
         +e.text--05
-          +e.H3.title Lorem ipsum dolor sit amet5
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+          +e.H3.title(itemprop="name") Lorem ipsum dolor sit amet5
+          p(itemprop="description") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam 
 
 
 
