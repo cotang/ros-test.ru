@@ -1502,6 +1502,8 @@ li {
     margin-bottom: 10px; }
   .contacts-section__link {
     display: block; }
+  .contacts-section__address p {
+    margin: 0; }
   .contacts-section__map iframe {
     width: 100%;
     height: 200px;

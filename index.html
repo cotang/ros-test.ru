@@ -46,9 +46,9 @@
     <header class="header">
       <div class="header__inner container">
         <!-- Logo-->
-        <div class="logo">
+        <div class="logo" itemscope itemtype="http://schema.org/Brand">
           <a class="logo__img" href="index.html">
-            <img src="img/logo.png" alt="logo" title="logo">
+            <img src="img/logo.png" alt="logo" title="logo" itemprop="logo">
           </a>
         </div>
         <nav class="nav">
@@ -520,16 +520,18 @@
         </nav>
         <div class="header__city">
           <!-- City-->
-          <div class="city">
+          <div class="city" itemscope itemtype="http://schema.org/Organization">
             <div class="city__name-wrapper">
-              <a class="city__link city__link--name" href="page-сontacts.html">Санкт-Петербург</a>
+              <a class="city__link city__link--name" href="page-сontacts.html">
+                <span itemprop="location">Санкт-Петербург</span>
+              </a>
             </div>
             <div class="city__tel-wrapper">
-              <a class="city__link city__link--tel" href="tel:+78123350511" target="_blank">(812) 335-05-11</a>
-              <a class="city__link city__link--tel" href="tel:+78129238223" target="_blank">(812) 923-82-23</a>
+              <a class="city__link city__link--tel" href="tel:+78123350511" target="_blank" itemprop="telephone">(812) 335-05-11</a>
+              <a class="city__link city__link--tel" href="tel:+78129238223" target="_blank" itemprop="telephone">(812) 923-82-23</a>
             </div>
             <div class="city__email-wrapper">
-              <a class="city__link city__link--email" href="mailto:info@ros-test.ru" target="_blank">info@ros-test.ru</a>
+              <a class="city__link city__link--email" href="mailto:info@ros-test.ru" target="_blank" itemprop="email">info@ros-test.ru</a>
             </div>
           </div>
         </div>
@@ -565,49 +567,58 @@
           <div class="after-header__clarification">Вы получите ответ на свой e-mail в течение 2-х часов</div>
         </div>
         <!-- Promo -->
-        <div class="promo">
+        <div class="promo" itemscope itemtype="http://schema.org/Product">
           <ul class="promo__list">
             <li class="promo__item promo__item--01">
-              <img src="img/promo/slide5.jpg" alt="slide5" title="slide5">
-              <a class="promo__link" href="page.html">Разработка и регистрация технических условий (ТУ)</a>
+              <img src="img/promo/slide5.jpg" alt="slide5" title="slide5" itemprop="image">
+              <a class="promo__link" href="page.html" itemprop="url"> </a>
+              <span itemprop="name">Разработка и регистрация технических условий (ТУ)</span>
             </li>
             <li class="promo__item promo__item--02">
-              <img src="img/promo/slide4.jpg" alt="slide4" title="slide4">
-              <a class="promo__link" href="page.html">Сертификат Пожарной сертификации </a>
+              <img src="img/promo/slide4.jpg" alt="slide4" title="slide4" itemprop="image">
+              <a class="promo__link" href="page.html" itemprop="url">
+                <span itemprop="name">Сертификат Пожарной сертификации </span>
+              </a>
             </li>
             <li class="promo__item promo__item--03">
-              <img src="img/promo/slide3.jpg" alt="slide3" title="slide3">
-              <a class="promo__link" href="page.html">Свидетельство о Гос.регистрации</a>
+              <img src="img/promo/slide3.jpg" alt="slide3" title="slide3" itemprop="image">
+              <a class="promo__link" href="page.html" itemprop="url">
+                <span itemprop="name">Свидетельство о Гос.регистрации</span>
+              </a>
             </li>
             <li class="promo__item promo__item--04">
-              <img src="img/promo/slide1.jpg" alt="slide1" title="slide1">
-              <a class="promo__link" href="page.html">Сертификат соответствия Техническому Регламенту (ТР)</a>
+              <img src="img/promo/slide1.jpg" alt="slide1" title="slide1" itemprop="image">
+              <a class="promo__link" href="page.html" itemprop="url">
+                <span itemprop="name">Сертификат соответствия Техническому Регламенту (ТР)</span>
+              </a>
             </li>
             <li class="promo__item promo__item--05">
-              <img src="img/promo/slide2.jpg" alt="slide2" title="slide2">
-              <a class="promo__link" href="page.html">Сертификат соответствия ГОСТ Р</a>
+              <img src="img/promo/slide2.jpg" alt="slide2" title="slide2" itemprop="image">
+              <a class="promo__link" href="page.html" itemprop="url">
+                <span itemprop="name">Сертификат соответствия ГОСТ Р</span>
+              </a>
             </li>
           </ul>
           <div class="promo__description">
             <div class="promo__text promo__text--01">
-              <h3 class="promo__title">Lorem ipsum dolor sit amet1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+              <h3 class="promo__title" itemprop="name">Lorem ipsum dolor sit amet1</h3>
+              <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
             <div class="promo__text promo__text--02">
-              <h3 class="promo__title">Lorem ipsum dolor sit amet2</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+              <h3 class="promo__title" itemprop="name">Lorem ipsum dolor sit amet2</h3>
+              <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
             </div>
             <div class="promo__text promo__text--03">
-              <h3 class="promo__title">Lorem ipsum dolor sit amet3</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+              <h3 class="promo__title" itemprop="name">Lorem ipsum dolor sit amet3</h3>
+              <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
             <div class="promo__text promo__text--04">
-              <h3 class="promo__title">Lorem ipsum dolor sit amet4</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+              <h3 class="promo__title" itemprop="name">Lorem ipsum dolor sit amet4</h3>
+              <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
             </div>
             <div class="promo__text promo__text--05">
-              <h3 class="promo__title">Lorem ipsum dolor sit amet5</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+              <h3 class="promo__title" itemprop="name">Lorem ipsum dolor sit amet5</h3>
+              <p itemprop="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
             </div>
           </div>
         </div>
@@ -616,20 +627,20 @@
     <main>
       <section class="page page--front-page container">
         <!-- About us-->
-        <section class="about-us">
+        <section class="about-us" itemscope itemtype="http://schema.org/Product">
           <h1 class="about-us__title">
-            <span>О компании</span>
+            <span itemprop="about">О компании</span>
           </h1>
-          <div class="about-us__text">
+          <div class="about-us__text" itemprop="description">
             <p>В центре сертификации Рос-Тест, квалифицированные специалисты готовы подобрать для Вас самые удобные и оптимальные варианты получения документов. Так же Вам будут предложены самые подходящие схемы сертификации. Наши опытные сотрудники предложат
               Вам минимальные сроки оформления разрешительных документов, учтут все нюансы оформления и всё это по приемлемой стоимости.</p>
             <p>Если Вы хотите избежать длительных и сложных моментов сертификационного процесса, то доверьте ответственную и сложную процедуру сертификации центру Рос-Тест.</p>
           </div>
         </section>
         <!-- Selection-->
-        <section class="selection">
+        <section class="selection" itemscope itemtype="http://schema.org/Service">
           <h2 class="selection__title">
-            <span>Подбор документов онлайн</span>
+            <span itemprop="offers">Подбор документов онлайн</span>
           </h2>
           <div class="selection__table">
             <div class="selection__steps-wrapper">
@@ -774,35 +785,35 @@
           </div>
         </section>
         <!-- Offers-->
-        <section class="offers" itemscope itemtype="http://schema.org/Service">
+        <section class="offers" itemscope itemtype="http://schema.org/Offer">
           <h2 class="offers__title">
             <span>Наши предложения</span>
           </h2>
           <ul class="offers__list">
-            <li class="offers__item" itemprop="offers">
+            <li class="offers__item">
               <div class="offers__text">
-                <span class="wider">Оформляем все виды документов</span>
+                <span class="wider" itemprop="itemOffered">Оформляем все виды документов</span>
               </div>
               <div class="offers__icon"></div>
               <a class="btn" href="#" data-form="application">Подать заявку</a>
             </li>
-            <li class="offers__item" itemprop="offers">
+            <li class="offers__item">
               <div class="offers__text">
-                <span>Бесплатные консультации</span>
+                <span itemprop="itemOffered">Бесплатные консультации</span>
               </div>
               <div class="offers__icon"></div>
               <a class="btn" href="#" data-form="question">Спросить он-лайн </a>
             </li>
-            <li class="offers__item" itemprop="offers">
+            <li class="offers__item">
               <div class="offers__text">
-                <span>Штрихкод на продукцию</span>
+                <span itemprop="itemOffered">Штрихкод на продукцию</span>
               </div>
               <div class="offers__icon"></div>
               <a class="btn" href="#" data-form="application" data-type="Штрихкод на продукцию">Заказать штрихкод</a>
             </li>
-            <li class="offers__item" itemprop="offers">
+            <li class="offers__item">
               <div class="offers__text">
-                <span>Сертификат ISO</span>
+                <span itemprop="itemOffered">Сертификат ISO</span>
               </div>
               <div class="offers__icon"></div>
               <a class="btn" href="#" data-form="application" data-type="Сертификат ISO">Заказать ISO</a>
@@ -868,36 +879,37 @@
         <span>Контактная информация</span>
       </h2>
       <!-- Reviews section-->
-      <section class="reviews-section">
+      <section class="reviews-section" itemscope itemtype="http://schema.org/Review">
         <h3 class="reviews-section__title">
           <a href="page-reviews.html">Отзывы наших клиентов</a>
         </h3>
         <ul class="reviews-section__list">
-          <li class="reviews-section__item">
+          <li class="reviews-section__item" itemprop="reviewBody">
             <div class="reviews-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad... minim veniam, quis nostrud exercitation.</div>
-            <a class="reviews-section__link" href="single-reviews.html">Смотреть полностью</a>
-            <div class="reviews-section__date">06.07.15</div>
+            <a class="reviews-section__link" href="single-reviews.html"
+              itemprop="url">Смотреть полностью</a>
+            <div class="reviews-section__date" itemprop="datePublished">06.07.15</div>
           </li>
-          <li class="reviews-section__item">
+          <li class="reviews-section__item" itemprop="reviewBody">
             <div class="reviews-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad... minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
             <a
-              class="reviews-section__link" href="single-reviews.html">Смотреть полностью</a>
-              <div class="reviews-section__date">06.07.15</div>
+              class="reviews-section__link" href="single-reviews.html" itemprop="url">Смотреть полностью</a>
+              <div class="reviews-section__date" itemprop="datePublished">06.07.15</div>
           </li>
         </ul>
       </section>
       <!-- Specialists-->
       <section class="specialists">
         <h3 class="specialists__title">Ваш специалист</h3>
-        <div class="manager">
+        <div class="manager" itemscope itemtype="http://schema.org/Person">
           <div class="manager__img-wrapper">
             <div class="manager__img">
-              <img src="img/managers/spec.jpg" alt="Елена" title="Елена">
+              <img src="img/managers/spec.jpg" alt="Елена" title="Елена" itemprop="image">
             </div>
           </div>
           <div class="manager__info">
-            <p class="manager__position">Специалист по сертификации</p>
-            <h3 class="manager__name">Елена Капралова</h3>
+            <p class="manager__position" itemprop="jobTitle">Специалист по сертификации</p>
+            <h3 class="manager__name" itemprop="name">Елена Капралова</h3>
             <a class="manager__link manager__link--icq" href="http://www.icq.com/whitepages/cmd.php?uin=444223004&amp;amp;action=message" target="_blank">444-223-004</a>
             <a class="manager__link manager__link--skype" href="skype:skypecall" target="_blank">skype: skypecall</a>
             <a class="manager__link manager__link--mail" href="mailto:info@ros-test.ru" target="_blank">info@ros-test.ru</a>
@@ -908,19 +920,22 @@
         </div>
       </section>
       <!-- Contacts section-->
-      <section class="contacts-section">
+      <section class="contacts-section" itemscope itemtype="http://schema.org/Organization">
         <div class="contacts-section__title-wrapper">
-          <h3 class="contacts-section__title">Рос-тест Санкт-Петербург</h3>
-          <a class="contacts-section__link-all" href="page-contacts.html">Смотреть все филиалы</a>
+          <h3 class="contacts-section__title" itemprop="name">Рос-тест Санкт-Петербург</h3>
+          <a class="contacts-section__link-all" href="page-contacts.html" itemprop="url">Смотреть все филиалы</a>
         </div>
         <div class="contacts-section__info">
-          <div class="contacts-section__address">м."Елизаровская"</div>
-          <div class="contacts-section__address">ул.Бабушкина, д.3, оф.255</div>
-          <a class="contacts-section__link" href="tel:+78123350511" target="_blank">(812) 335-05-11</a>
-          <a class="contacts-section__link" href="tel:+78129238223" target="_blank">(812) 923-82-23</a>
+          <div class="contacts-section__address" itemprop="address">
+            <p>м."Елизаровская"</p>
+            <p>ул.Бабушкина, д.3, оф.255</p>
+          </div>
+          <a class="contacts-section__link" href="tel:+78123350511" target="_blank" itemprop="telephone">(812) 335-05-11</a>
+          <a class="contacts-section__link" href="tel:+78129238223" target="_blank" itemprop="telephone">(812) 923-82-23</a>
         </div>
         <div class="contacts-section__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4240.110454070536!2d30.413835351820655!3d59.89785921195567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fcd58f5a521%3A0xb70d4a7dc713bde5!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAzLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkyMDI5!5e0!3m2!1sru!2sru!4v1473687650068"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4240.110454070536!2d30.413835351820655!3d59.89785921195567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fcd58f5a521%3A0xb70d4a7dc713bde5!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCAzLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkyMDI5!5e0!3m2!1sru!2sru!4v1473687650068"
+            itemprop="location" itemscope itemtype="http://schema.org/Map"></iframe>
         </div>
       </section>
     </section>
@@ -928,9 +943,9 @@
     <footer class="footer">
       <div class="footer__inner container">
         <!-- Logo-->
-        <div class="logo">
+        <div class="logo" itemscope itemtype="http://schema.org/Brand">
           <a class="logo__img" href="index.html">
-            <img src="img/logo.png" alt="logo" title="logo">
+            <img src="img/logo.png" alt="logo" title="logo" itemprop="logo">
           </a>
         </div>
         <!-- Second menu-->
