@@ -26,6 +26,7 @@
     padding: 8px 10px; 
     width: 100%;
     border: 1px solid $grey-border;
+    margin-bottom: 15px;
     &::-webkit-input-placeholder{
       color: $text-color;        
     }       
@@ -37,17 +38,18 @@
     }       
     &:focus::placeholder{
       color: transparent;         
-    } 
-    &--time{
-      width: 100px;
-      margin: 0 5px;
     }
   }
   &__textarea{
+    vertical-align: top;
     padding: 8px 10px;    
     width: 100%;
     border: 1px solid $grey-border;
     height: 150px;
+    margin-bottom: 15px;
+    @include mq($from:xs, $until:sm){
+      height: 100px;
+    } 
     &::-webkit-input-placeholder{
       color: $text-color;        
     }       
@@ -61,29 +63,16 @@
       color: transparent;         
     } 
   }
-  &__region-list{
+  &__select{
     padding: 5px 10px; 
     width: 100%;
     border: 1px solid $grey-border;
+    margin-bottom: 15px;
   }
-  &__country-list{
-    padding: 5px 10px; 
-    width: 100%;
-    border: 1px solid $grey-border;
-  }
-  .recaptcha{
-    flex: 0 0 100%;
-    @include mq($from:xs, $until:sm){
-      transform: scale(0.65);
-    } 
-  } 
 }
 
 .form-group{
   flex: 0 0 100%;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  margin-bottom: 20px;
 }
 
 .captcha{

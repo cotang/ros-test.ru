@@ -18,6 +18,8 @@
     padding-right: 30px;
     font-size: $font-size-smaller;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     @include mq($from:xs, $until:lg){
       flex: 0 0 100%;
       max-width: 500px;
@@ -28,7 +30,6 @@
     .form{
       background-image: url(../img/form-bg1.png);
       background-repeat: repeat;
-      height: 100%;
     }
     .form__title{
       font-size: $font-size-big;
@@ -37,30 +38,23 @@
     }
     .form__input{
       padding: 5px 10px;
+      margin-bottom: 10px;
     }
     .form__textarea{
       max-height: 100px;
+      margin-bottom: 10px;
+    }
+    .form__select{
+      margin-bottom: 10px;
     }
     .help-block{
       color: $white;
-      margin-bottom: 0;
+      margin: 0 0 10px;
     }
-    .form-group{
-      margin-bottom: 15px;
-    }
-    .recaptcha{
-      margin-bottom: 0;
-      @include mq($from:lg, $until:xl){
-        transform: scale(0.75);
-      }  
-      @include mq($from:xs, $until:sm){
-        transform: scale(0.65);
-      }  
-    }
-
     .btn--form{
       border-image: url(../img/form-bg1.png) 3 repeat;
       width: 100%;
+      margin-bottom: 10px;
       &:active{
         border-image: none;
       }
@@ -76,11 +70,7 @@
     margin: 0 auto;
     color: $text-blue;
     font-size: $font-size-small;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-right: 30px;
+    width: 100%;
     @include mq($from:xs, $until:lg){
       margin-right: 0;
     } 
@@ -90,6 +80,8 @@
 .promo{
   flex: 0 0 65%;
   max-width: 65%;
+  display: flex;
+  flex-wrap: wrap;
   @include mq($from:xs, $until:lg){
     flex: 0 0 100%;
     max-width: 100%;
@@ -140,6 +132,8 @@
     }
   }
   &__description{
+    flex: 0 0 100%;
+    max-width: 100%;
     background-color: $body-bg;
     padding: 15px;
   }
