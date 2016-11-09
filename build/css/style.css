@@ -1205,7 +1205,8 @@ li {
             flex-wrap: wrap; }
     .after-header__form .form {
       background-image: url(../img/form-bg1.png);
-      background-repeat: repeat; }
+      background-repeat: repeat;
+      width: 100%; }
     .after-header__form .form__title {
       font-size: 20px;
       font-weight: 400;
@@ -1233,7 +1234,7 @@ li {
     text-transform: uppercase;
     padding: 10px 20px;
     text-align: center;
-    max-width: 500px;
+    max-height: 40px;
     margin: 0 auto;
     color: #18447a;
     font-size: 12px;
@@ -1251,6 +1252,7 @@ li {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
   .promo__list {
+    width: 100%;
     padding-left: 0;
     list-style-type: none;
     margin: 0;
@@ -1264,7 +1266,7 @@ li {
     -webkit-flex: 0 0 20%;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
-    height: 250px;
+    min-height: 250px;
     position: relative;
     overflow: hidden;
     transition: all 0.325s ease 0s; }
